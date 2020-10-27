@@ -27,6 +27,8 @@ public class AccentRemover {
         input = input.replace('ἔ', 'ε');
         input = input.replace('ἕ', 'ε');
 
+        input = input.replace('Ἐ', 'Ε');
+
         input = input.replace('ἦ', 'η');
         input = input.replace('ἧ', 'η');
         input = input.replace('ῆ', 'η');

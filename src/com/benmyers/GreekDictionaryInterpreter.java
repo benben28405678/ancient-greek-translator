@@ -31,8 +31,8 @@ public class GreekDictionaryInterpreter {
                 }
 
                 switch(input) {
-                    case ENG: dictionary.put(keywords[1], keywords[0]); break;
-                    case GRK: dictionary.put(keywords[0], keywords[1]); break;
+                    case ENG: dictionary.put(eng, grk); break;
+                    case GRK: dictionary.put(grk, eng); break;
                     default: break;
                 }
 

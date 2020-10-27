@@ -60,8 +60,14 @@ public class Main {
 
             if(input.contains("!a") || input.contains("!α")) {
                 flags.add(Flag.USING_ACCENTS);
-                println("[⚑] Optional Flag: Strict Accents enabled");
-                input.replaceAll("![aα]", "");
+                println("[⚑] Flag: Strict Accents enabled");
+                input = input.replaceAll("![aα]", "");
+            }
+
+            if(input.contains("!p") || input.contains("!π")) {
+                flags.add(Flag.USING_ACCENTS);
+                println("[⚑] Pronunciation enabled");
+                input = input.replaceAll("![pπ]", "");
             }
 
             dictionaryInterpreter = new GreekDictionaryInterpreter(lang, flags);
