@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="AncientGreekTranslator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/AncientGreekTranslator_jar</output-path>
+    <root id="archive" name="AncientGreekTranslator.jar">
+      <element id="module-output" name="AncientGreekTranslator" />
+    </root>
+  </artifact>
+</component>

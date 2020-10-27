@@ -1,0 +1,117 @@
+# Greek to English Dictionary
+#
+# Key:
+# greek word - english word
+# english word/english alternative
+# "." in Greek word implies a verb declension
+# "," in Greek word implies an adj. declension
+#
+# Chapter 1
+#
+# Section A, B --------------------------------------------------------------------------------
+ἀκρόπολις - acropolis
+ἆρα - ?
+βαίν.ω - come/go/walk
+γῆ - land
+δέ - and/but
+δεῦρο - over here
+ἐγώ - I
+ἔπειτα - then/next
+καί - and/also
+καλο,ός - beautiful/fine/good
+ναύτης - sailor
+νεώριον - dockyard
+Παρθενών - Parthenon
+πλοῖον - vessel/ship
+ῥαψωδός - rhapsode
+σύ - you (s)
+τίς - what?/who?
+ὦ - O
+#
+# Section C, D --------------------------------------------------------------------------------
+ἀκού.ω - hear/listen
+ἀληυῆ - the truth
+ἀλλά - but/alternatively
+βλέπ.ω - look (at)
+γάρ - for/because
+διώκ.ω - chase/pursue
+ἔγωγωε - I at least/at any rate
+εἰσβαίν.ω - enter/board
+ἡμεῖς - we
+καταβαίν.ω - go/come down
+μέν.ω - remain/wait for
+μή - don't!
+οὐδέν - nothing
+οὖν - so/then/really/therefore
+τί - what?
+ὑμεῖς - you (pl)
+φεύγ.ω - flee/run away/run off
+ὡς - how!
+#
+# Section E, F --------------------------------------------------------------------------------
+ἀκρῑβῶς - accurately/closely
+βαθέως - deeply
+βοηθέ.ω - help/run to help
+δηλόω - show/reveal
+κακῶς - badly/evilly
+καλῶς - finely/beautifully
+μέν - one one hand
+δέ - on the other hand
+οἴμοι - alas!/oh dear!
+ὁρά.ω - see
+ποῖ - to where?
+ποιέ.ω - make/do
+ποῦ - where?
+σαφῶς - clearly
+σεαυτόν - yourself (s)
+#
+# Section G --------------------------------------------------------------------------------
+αναβαίν.ω - go up
+ἄνθρωπος - man/fellow
+ἀποθνήσκ.ω - die
+ἀποχωρέω - go away/depart
+γε - at least/at any rate
+διὰ τί - why?
+δύω - sink
+ἐλθ.έ - come!/go!
+ἐμπόριον - marketplace
+ἔργον - task/work/job/duty
+ἔχ.ω - have/hold
+ἡμέτερος - our (s)
+θάλαττα - sea
+κακός - bad/evil/cowardly/lowly/mean
+κυβερνήτης - captain/helmsman
+λέγ.ω - say
+λέμβος - boat/lifeboat
+νῦν - now
+πλέ.ω - sail
+ῥίπτ.ω - throw/hurl
+σώζ.ω - save/keep safe
+σῶος - safe
+σωτηρίᾱ - safety/salvation
+φίλος - friend
+φροντίζω - think/worry
+#
+# Section H, I, J --------------------------------------------------------------------------------
+ᾱεί - always
+ἄριστος - best/very good
+γιγνώσκω - know/think/resolve
+δῆλος - clear/obvious
+εἰμί - I am
+Ἔμπειρος - Greek
+ἔμπειρος - skilled/experienced
+ἤ - or
+μῶρος - stupid/foolish
+ναί - yes
+ναῦς - ship
+οῖδα - know
+ὅτι - that
+παίζω - play/joke
+περί - about
+πολλά - many things
+πῶς γὰρ οὔ - of course
+στρατηγός - general
+τὰ ναυτικά - naval matters
+τὰ στρατηγικά - leadership/generalship
+τὰ στρατιωτικά - military matters
+#
