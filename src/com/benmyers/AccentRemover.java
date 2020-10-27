@@ -94,6 +94,8 @@ public class AccentRemover {
         input = input.replace('ὤ', 'ω');
         input = input.replace('ὥ', 'ω');
 
+        input = input.replace('ῥ', 'ρ');
+
         return input;
     }
 

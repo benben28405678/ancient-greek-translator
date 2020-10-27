@@ -39,7 +39,13 @@
 ἐστέ - you all are
 εἰσί - they are
 εἰσίν - they are
-
+οἶδα - I know
+οἶσθα - you know
+οἶδε - he knows/she knows/it knows
+ἴσμεν - we know
+ἴστε - you all know
+ἴσασι - they know
+ἴσασιν - they know
 #
 # Chapter 1
 #
