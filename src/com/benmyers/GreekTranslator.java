@@ -26,7 +26,7 @@ public class GreekTranslator extends Translator {
                 Matcher m = p.matcher(translatedWord);
 
                 if(m.find() && chunks.length > 1) {
-                    translatedWord = chunks[0] + m.group(0);
+                    translatedWord = chunks[0] + " "+ m.group(0);
                 } else {
                     translatedWord = chunks[0];
                 }

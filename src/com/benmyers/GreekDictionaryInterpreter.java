@@ -172,7 +172,7 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "ω", eng + " (2a dat s)");
                         dictionary.put(stem + "οις", eng + " (2a dat pl)");
                         dictionary.put(stem + "ε", eng + " (2a voc)");
-                    } else if (grk.indexOf(";1b") >= 0) {
+                    } else if (grk.indexOf(";2b") >= 0) {
                         String stem = grk.replaceAll("ον;2b|α;2b|ου;2b|ων;2b|ου;2b|ων;2b|ω;2b|οις;2b", "");
 
                         dictionary.put(stem + "ον", eng + " (2b nom/acc s)");
