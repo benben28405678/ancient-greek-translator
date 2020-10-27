@@ -1,6 +1,7 @@
 package com.benmyers;
 
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -11,6 +12,8 @@ public class Main {
     private static Translator translator;
 
     private static String repeatCommand = "";
+
+    private static ArrayList<Flag> flags = new ArrayList<Flag>();
 
     public static void main(String[] args) {
 
@@ -55,7 +58,13 @@ public class Main {
 
             }
 
-            dictionaryInterpreter = new GreekDictionaryInterpreter(lang);
+            if(input.contains("!a") || input.contains("!α")) {
+                flags.add(Flag.USING_ACCENTS);
+                println("[⚑] Optional Flag: Strict Accents enabled");
+                input.replaceAll("![aα]", "");
+            }
+
+            dictionaryInterpreter = new GreekDictionaryInterpreter(lang, flags);
 
             switch (lang) {
                 case GRK:
@@ -77,10 +86,10 @@ public class Main {
             }
 
             br();
-            print("[!] Press enter to start again. Type \"e\" or \"ε\" to exit.");
+            print("[!] Press enter to start again. Type \"e\" or \"ε\" to exit. > ");
             repeatCommand = sc.nextLine();
 
-            if(repeatCommand == "e" || repeatCommand == "ε") System.exit(1);
+            if(repeatCommand.contains("e") || repeatCommand.contains("ε")) System.exit(1);
 
             System.out.print("\033[H\033[2J");
             System.out.flush();

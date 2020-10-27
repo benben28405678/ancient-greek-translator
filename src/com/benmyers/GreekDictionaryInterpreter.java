@@ -6,13 +6,14 @@ import java.io.FileNotFoundException;
 import java.util.Dictionary;
 import java.util.Hashtable;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class GreekDictionaryInterpreter {
 
     private Language keyLanguage;
     private Dictionary dictionary = new Hashtable();
 
-    public GreekDictionaryInterpreter(Language input) {
+    public GreekDictionaryInterpreter(Language input, ArrayList<Flag> flags) {
 
         try {
             File file = new File("dictionary.txt");
@@ -21,6 +22,14 @@ public class GreekDictionaryInterpreter {
                 String data = sc.nextLine();
                 if(data.charAt(0) == '#') continue;
                 String[] keywords = data.split(" - ");
+
+                String grk = keywords[0];
+                String eng = keywords[1];
+
+                if(!flags.contains(Flag.USING_ACCENTS)) {
+                    grk = AccentRemover.removeAccents(grk);
+                }
+
                 switch(input) {
                     case ENG: dictionary.put(keywords[1], keywords[0]); break;
                     case GRK: dictionary.put(keywords[0], keywords[1]); break;
