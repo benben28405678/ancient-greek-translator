@@ -3,10 +3,7 @@ package com.benmyers;
 import java.io.File;
 import java.io.IOException;
 import java.io.FileNotFoundException;
-import java.util.Dictionary;
-import java.util.Hashtable;
-import java.util.Scanner;
-import java.util.ArrayList;
+import java.util.*;
 
 public class GreekDictionaryInterpreter {
 
@@ -35,7 +32,11 @@ public class GreekDictionaryInterpreter {
                 if(grk.indexOf(".ω") >= 0) {
                     String stem = grk.replaceAll("\\..", "");
                     // α contract
-                    if(stem.substring(stem.length() - 1) == "α") {
+                    //System.out.println(stem);
+                    //System.out.println(AccentRemover.removeAccents(stem.substring(stem.length() - 1)));
+                    if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("α")) {
+                        //System.out.println("a contract");
+                        stem = stem.substring(0, stem.length() - 1);
                         if(flags.contains(Flag.USING_ACCENTS)) {
                             dictionary.put(stem + "ῶ", eng + " (1s)");
                             dictionary.put(stem + "ᾶς", eng + " (2s)");
@@ -53,7 +54,8 @@ public class GreekDictionaryInterpreter {
                         }
                     }
                     // ε contract
-                    else if(stem.substring(stem.length() - 1) == "ε") {
+                    else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ε")) {
+                        stem = stem.substring(0, stem.length() - 1);
                         if(flags.contains(Flag.USING_ACCENTS)) {
                             dictionary.put(stem + "ῶ", eng + " (1s)");
                             dictionary.put(stem + "εῖς", eng + " (2s)");
@@ -71,7 +73,8 @@ public class GreekDictionaryInterpreter {
                         }
                     }
                     // ο contract
-                    else if(stem.substring(stem.length() - 1) == "ο") {
+                    else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ο")) {
+                        stem = stem.substring(0, stem.length() - 1);
                         if(flags.contains(Flag.USING_ACCENTS)) {
                             dictionary.put(stem + "ῶ", eng + " (1s)");
                             dictionary.put(stem + "οῖς", eng + " (2s)");
@@ -117,17 +120,17 @@ public class GreekDictionaryInterpreter {
                             dictionary.put(stem + "ῆ", eng + " (dat f s)");
                         }
                         dictionary.put(stem + "ός", eng + " (nom m s)");
-                        dictionary.put(stem + "όν", eng + " (acc m/n s)");
-                        dictionary.put(stem + "οῦ", eng + " (gen m/n s)");
-                        dictionary.put(stem + "ῶ", eng + " (dat m/n s)");
+                        dictionary.put(stem + "όν", eng + " (acc m+n s)");
+                        dictionary.put(stem + "οῦ", eng + " (gen m+n s)");
+                        dictionary.put(stem + "ῶ", eng + " (dat m+n s)");
                         dictionary.put(stem + "έ", eng + " (voc s)");
                         dictionary.put(stem + "οί", eng + " (nom m pl)");
                         dictionary.put(stem + "αί", eng + " (nom f pl)");
-                        dictionary.put(stem + "ά", eng + " (nom/acc n pl)");
+                        dictionary.put(stem + "ά", eng + " (nom+acc n pl)");
                         dictionary.put(stem + "ούς", eng + " (acc m pl)");
                         dictionary.put(stem + "ᾱς", eng + " (acc f pl)");
                         dictionary.put(stem + "ῶν", eng + " (gen pl)");
-                        dictionary.put(stem + "οῖς", eng + " (dat m/n pl)");
+                        dictionary.put(stem + "οῖς", eng + " (dat m+n pl)");
                         dictionary.put(stem + "αῖς", eng + " (dat f pl)");
                     } else {
                         if(stem.substring(stem.length() - 1) == "ι" || stem.substring(stem.length() - 1) == "ρ" || stem.substring(stem.length() - 1) == "ε") {
@@ -142,17 +145,17 @@ public class GreekDictionaryInterpreter {
                             dictionary.put(stem + "η", eng + " (dat f s)");
                         }
                         dictionary.put(stem + "ος", eng + " (nom m s)");
-                        dictionary.put(stem + "ον", eng + " (acc m/n s)");
-                        dictionary.put(stem + "ου", eng + " (gen m/n s)");
-                        dictionary.put(stem + "ω", eng + " (dat m/n s)");
+                        dictionary.put(stem + "ον", eng + " (acc m+n s)");
+                        dictionary.put(stem + "ου", eng + " (gen m+n s)");
+                        dictionary.put(stem + "ω", eng + " (dat m+n s)");
                         dictionary.put(stem + "ε", eng + " (voc s)");
                         dictionary.put(stem + "οι", eng + " (nom m pl)");
                         dictionary.put(stem + "αι", eng + " (nom f pl)");
-                        dictionary.put(stem + "α", eng + " (nom/acc n pl)");
+                        dictionary.put(stem + "α", eng + " (nom+acc n pl)");
                         dictionary.put(stem + "ους", eng + " (acc m pl)");
                         dictionary.put(stem + "ας", eng + " (acc f pl)");
                         dictionary.put(stem + "ων", eng + " (gen pl)");
-                        dictionary.put(stem + "οις", eng + " (dat m/n pl)");
+                        dictionary.put(stem + "οις", eng + " (dat m+n pl)");
                         dictionary.put(stem + "αις", eng + " (dat f pl)");
                     }
                     continue;
@@ -166,6 +169,9 @@ public class GreekDictionaryInterpreter {
 
             }
             sc.close();
+            for (Enumeration e = dictionary.keys(); e.hasMoreElements();) {
+                System.out.println(e.nextElement());
+            }
         } catch(FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();

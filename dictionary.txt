@@ -19,15 +19,15 @@
 τοῦ - the (gen m s)
 τῆς - the (gen f s)
 τοῦ - the (gen n s)
-τῶ - the (dat m/n s)
+τῶ - the (dat m+n s)
 τῆ - the (dat f s)
 οἱ - the (nom m pl)
 αἱ - the (nom f pl)
-τά - the (nom/acc n pl)
+τά - the (nom+acc n pl)
 τούς - the (acc m pl)
 τᾱς - the (acc f pl)
 τῶν - the (gen pl)
-τοῖς - the (dat m/n pl)
+τοῖς - the (dat m+n pl)
 ταῖς - the (dat f pl)
 #
 # Irregular Verbs --------------------------------------------------------------------------------

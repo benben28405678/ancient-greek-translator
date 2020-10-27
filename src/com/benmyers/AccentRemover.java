@@ -22,6 +22,7 @@ public class AccentRemover {
         input = input.replace('ἒ', 'ε');
         input = input.replace('ἓ', 'ε');
         input = input.replace('έ', 'ε');
+        input = input.replace('έ', 'ε');
         input = input.replace('ἐ', 'ε');
         input = input.replace('ἑ', 'ε');
         input = input.replace('ἔ', 'ε');
@@ -61,6 +62,7 @@ public class AccentRemover {
         input = input.replace('ὂ', 'ο');
         input = input.replace('ὃ', 'ο');
         input = input.replace('ό', 'ο');
+        input = input.replace('ό', 'ο');
         input = input.replace('ὀ', 'ο');
         input = input.replace('ὁ', 'ο');
         input = input.replace('ὄ', 'ο');
