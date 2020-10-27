@@ -91,11 +91,11 @@ public class Main {
                 br();
 
                 println("[!] Translated output:");
-                println("[!] \"" + output + "\"");
+                println("[✓] \"" + output + "\"");
 
                 if(flags.contains(Flag.PRONUNCIATION)) {
                     println("[!] Pronunciation:");
-                    println("[!] \"" + ((GreekTranslator)translator).pronounce(input) + "\"");
+                    println("[✓] \"" + ((GreekTranslator)translator).pronounce(input) + "\"");
                 }
             } else {
                 println("[x] A dictionary could not be found.");

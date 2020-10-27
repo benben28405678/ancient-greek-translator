@@ -31,6 +31,7 @@ public class GreekDictionaryInterpreter {
                     grk = AccentRemover.removeAccents(grk);
                 }
 
+                // Uncontracted Verbs
                 if(grk.indexOf(".ω") >= 0) {
                     String stem = grk.replaceAll("\\..", "");
                     dictionary.put(stem + "ω", eng + " (1s)");
@@ -40,6 +41,63 @@ public class GreekDictionaryInterpreter {
                     dictionary.put(stem + "ετε", eng + " (2pl)");
                     dictionary.put(stem + "ουοι", eng + " (3pl)");
                     dictionary.put(stem + "ουοιν", eng + " (3pl)");
+                    continue;
+                }
+
+                // Adjectives
+                if(grk.indexOf(",ος") >= 0) {
+                    String stem = grk.replaceAll(",ος", "");
+                    if(flags.contains(Flag.USING_ACCENTS)) {
+                        if(stem.substring(stem.length() - 1) == "ι" || stem.substring(stem.length() - 1) == "ρ" || stem.substring(stem.length() - 1) == "ε") {
+                            dictionary.put(stem + "ᾱ", eng + " (nom f s)");
+                            dictionary.put(stem + "ᾱν", eng + " (acc f s)");
+                            dictionary.put(stem + "ᾱς", eng + " (gen f s)");
+                            dictionary.put(stem + "α", eng + " (dat f s)");
+                        } else {
+                            dictionary.put(stem + "ή", eng + " (nom f s)");
+                            dictionary.put(stem + "ήν", eng + " (acc f s)");
+                            dictionary.put(stem + "ῆς", eng + " (gen f s)");
+                            dictionary.put(stem + "ῆ", eng + " (dat f s)");
+                        }
+                        dictionary.put(stem + "ός", eng + " (nom m s)");
+                        dictionary.put(stem + "όν", eng + " (acc m/n s)");
+                        dictionary.put(stem + "οῦ", eng + " (gen m/n s)");
+                        dictionary.put(stem + "ῶ", eng + " (dat m/n s)");
+                        dictionary.put(stem + "έ", eng + " (voc s)");
+                        dictionary.put(stem + "οί", eng + " (nom m pl)");
+                        dictionary.put(stem + "αί", eng + " (nom f pl)");
+                        dictionary.put(stem + "ά", eng + " (nom/acc n pl)");
+                        dictionary.put(stem + "ούς", eng + " (acc m pl)");
+                        dictionary.put(stem + "ᾱς", eng + " (acc f pl)");
+                        dictionary.put(stem + "ῶν", eng + " (gen pl)");
+                        dictionary.put(stem + "οῖς", eng + " (dat m/n pl)");
+                        dictionary.put(stem + "αῖς", eng + " (dat f pl)");
+                    } else {
+                        if(stem.substring(stem.length() - 1) == "ι" || stem.substring(stem.length() - 1) == "ρ" || stem.substring(stem.length() - 1) == "ε") {
+                            dictionary.put(stem + "α", eng + " (nom f s)");
+                            dictionary.put(stem + "αν", eng + " (acc f s)");
+                            dictionary.put(stem + "ας", eng + " (gen f s)");
+                            dictionary.put(stem + "α", eng + " (dat f s)");
+                        } else {
+                            dictionary.put(stem + "η", eng + " (nom f s)");
+                            dictionary.put(stem + "ην", eng + " (acc f s)");
+                            dictionary.put(stem + "ης", eng + " (gen f s)");
+                            dictionary.put(stem + "η", eng + " (dat f s)");
+                        }
+                        dictionary.put(stem + "ος", eng + " (nom m s)");
+                        dictionary.put(stem + "ον", eng + " (acc m/n s)");
+                        dictionary.put(stem + "ου", eng + " (gen m/n s)");
+                        dictionary.put(stem + "ω", eng + " (dat m/n s)");
+                        dictionary.put(stem + "ε", eng + " (voc s)");
+                        dictionary.put(stem + "οι", eng + " (nom m pl)");
+                        dictionary.put(stem + "αι", eng + " (nom f pl)");
+                        dictionary.put(stem + "α", eng + " (nom/acc n pl)");
+                        dictionary.put(stem + "ους", eng + " (acc m pl)");
+                        dictionary.put(stem + "ας", eng + " (acc f pl)");
+                        dictionary.put(stem + "ων", eng + " (gen pl)");
+                        dictionary.put(stem + "οις", eng + " (dat m/n pl)");
+                        dictionary.put(stem + "αις", eng + " (dat f pl)");
+                    }
                     continue;
                 }
 

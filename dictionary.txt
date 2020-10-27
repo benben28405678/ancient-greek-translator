@@ -90,12 +90,12 @@
 ὡς - how!
 #
 # Section E, F --------------------------------------------------------------------------------
-ἀκρῑβῶς - accurately/closely
-βαθέως - deeply
+ἀκρῑβ,ος - accurate/close
+βαθέ,ος - deep
 βοηθέ.ω - help/run to help
-δηλόω - show/reveal
-κακῶς - badly/evilly
-καλῶς - finely/beautifully
+δηλό.ω - show/reveal
+κακ,ος - bad/evil
+καλ,ος - fine/beautiful
 μέν - one one hand
 δέ - on the other hand
 οἴμοι - alas!/oh dear!
@@ -103,7 +103,7 @@
 ποῖ - to where?
 ποιέ.ω - make/do
 ποῦ - where?
-σαφῶς - clearly
+σαφ,ος - clear
 σεαυτόν - yourself (s)
 #
 # Section G --------------------------------------------------------------------------------
@@ -135,19 +135,18 @@
 #
 # Section H, I, J --------------------------------------------------------------------------------
 ᾱεί - always
-ἄριστος - best/very good
-γιγνώσκω - know/think/resolve
-δῆλος - clear/obvious
-εἰμί - I am
-Εμπειρος - Greek
-ἔμπειρος - skilled/experienced
+ἄριστ,ος - best/very good
+γιγνώσκ.ω - know/think/resolve
+δῆλ,ος - clear/obvious
+Ελλην - Greek
+ἔμπειρ,ος - skilled/experienced
 ἤ - or
-μῶρος - stupid/foolish
+μῶρ,ος - stupid/foolish
 ναί - yes
 ναῦς - ship
 οῖδα - know
 ὅτι - that
-παίζω - play/joke
+παίζ.ω - play/joke
 περί - about
 πολλά - many things
 πῶς γὰρ οὔ - of course
