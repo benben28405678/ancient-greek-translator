@@ -6,6 +6,41 @@
 # "." in Greek word implies a verb declension
 # "," in Greek word implies an adj. declension
 #
+#
+# Grammar
+#
+# Definite Articles --------------------------------------------------------------------------------
+ὁ - the (nom m s)
+ἡ - the (nom f s)
+τό - the (nom n s)
+τόν - the (acc m s)
+τήν - the (acc f s)
+τό - the (acc n s)
+τοῦ - the (gen m s)
+τῆς - the (gen f s)
+τοῦ - the (gen n s)
+τῶ - the (dat m/n s)
+τῆ - the (dat f s)
+οἱ - the (nom m pl)
+αἱ - the (nom f pl)
+τά - the (nom/acc n pl)
+τούς - the (acc m pl)
+τᾱς - the (acc f pl)
+τῶν - the (gen pl)
+τοῖς - the (dat m/n pl)
+ταῖς - the (dat f pl)
+#
+# Irregular Verbs --------------------------------------------------------------------------------
+εἰμί - I am
+εἶ - you are
+ἐστί - he is/she is/it is
+ἐστίν - he is/she is/it is
+ἐσμέν - we are
+ἐστέ - you all are
+εἰσί - they are
+εἰσίν - they are
+
+#
 # Chapter 1
 #
 # Section A, B --------------------------------------------------------------------------------
@@ -32,7 +67,7 @@
 ἀκού.ω - hear/listen
 ἀληυῆ - the truth
 ἀλλά - but/alternatively
-βλέπ.ω - look (at)
+βλέπ.ω - look at
 γάρ - for/because
 διώκ.ω - chase/pursue
 ἔγωγωε - I at least/at any rate

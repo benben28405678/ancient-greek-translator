@@ -12,6 +12,7 @@ public class GreekDictionaryInterpreter {
 
     private Language keyLanguage;
     private Dictionary dictionary = new Hashtable();
+    private ArrayList<String> verbStems = new ArrayList<String>();
 
     public GreekDictionaryInterpreter(Language input, ArrayList<Flag> flags) {
 
@@ -28,6 +29,18 @@ public class GreekDictionaryInterpreter {
 
                 if(!flags.contains(Flag.USING_ACCENTS)) {
                     grk = AccentRemover.removeAccents(grk);
+                }
+
+                if(grk.indexOf(".ω") >= 0) {
+                    String stem = grk.replaceAll("\\..", "");
+                    dictionary.put(stem + "ω", eng + " (1s)");
+                    dictionary.put(stem + "εις", eng + " (2s)");
+                    dictionary.put(stem + "ει", eng + " (3s)");
+                    dictionary.put(stem + "ομεν", eng + " (1pl)");
+                    dictionary.put(stem + "ετε", eng + " (2pl)");
+                    dictionary.put(stem + "ουοι", eng + " (3pl)");
+                    dictionary.put(stem + "ουοιν", eng + " (3pl)");
+                    continue;
                 }
 
                 switch(input) {
