@@ -65,7 +65,7 @@ public class Main {
             }
 
             if(input.contains("!p") || input.contains("!π")) {
-                flags.add(Flag.USING_ACCENTS);
+                flags.add(Flag.PRONUNCIATION);
                 println("[⚑] Pronunciation enabled");
                 input = input.replaceAll("![pπ]", "");
             }
@@ -86,6 +86,11 @@ public class Main {
 
                 println("[!] Translated output:");
                 println("[!] \"" + output + "\"");
+
+                if(flags.contains(Flag.PRONUNCIATION)) {
+                    println("[!] Pronunciation:");
+                    println("[!] \"" + ((GreekTranslator)translator).pronounce(input) + "\"");
+                }
             } else {
                 println("[x] A dictionary could not be found.");
                 System.exit(-2);
