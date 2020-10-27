@@ -116,11 +116,15 @@
 # Section G --------------------------------------------------------------------------------
 αναβαίν.ω - go up
 ἄνθρωπος;2a - man/fellow
+ἀπό - away from
 ἀποθνήσκ.ω - die
 ἀποχωρέω - go away/depart
 γε - at least/at any rate
 διὰ τί - why?
 δύ.ω - sink
+εἰς - tp/into/onto
+ἐκ - out of
+ἐζ - out of
 ἐλθ.έ - come!/go!
 ἐμπόριον;2b - marketplace
 ἔργον;2b - task/work/job/duty
@@ -133,6 +137,7 @@
 λέμβος;2a - boat/lifeboat
 νῦν - now
 πλέ.ω - sail
+πρός - towards
 ῥίπτ.ω - throw/hurl
 σώζ.ω - save/keep safe
 σῶος - safe
