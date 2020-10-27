@@ -26,12 +26,12 @@ public class GreekDictionaryInterpreter {
 
                 // Nouns
                 String nounStem = null;
-                if(!grk.contains(".") && !grk.contains(",")) {
-                    if (grk.indexOf("ος") >= 0 || grk.indexOf("οι") >= 0 || grk.indexOf("ον") >= 0 || grk.indexOf("ου") >= 0 || grk.indexOf("ων") >= 0 || grk.indexOf("ον") >= 0)
+                if(!grk.contains(".") && !grk.contains(",") && grk.length() >= 4) {
+                    if (grk.indexOf("ος") == grk.length() - 2 || grk.indexOf("οι") == grk.length() - 2 || grk.indexOf("ον") == grk.length() - 2 || grk.indexOf("ου") == grk.length() - 2 || grk.indexOf("ων") == grk.length() - 2)
                         nounStem = grk.substring(0, grk.length() - 2);
-                    if (grk.indexOf("ω") >= 0 || grk.indexOf("ε") >= 0 || grk.indexOf("α") >= 0)
+                    if (grk.indexOf("ω") == grk.length() - 1 || grk.indexOf("ε") == grk.length() - 1 || grk.indexOf("α") == grk.length() - 1)
                         nounStem = grk.substring(0, grk.length() - 1);
-                    if (grk.indexOf("ους") >= 0 || grk.indexOf("οις") >= 0)
+                    if (grk.indexOf("ους") == grk.length() - 3 || grk.indexOf("οις") == grk.length() - 3)
                         nounStem = grk.substring(0, grk.length() - 3);
                 }
 

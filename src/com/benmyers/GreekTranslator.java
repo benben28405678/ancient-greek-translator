@@ -23,7 +23,7 @@ public class GreekTranslator extends Translator {
             if(!flags.contains(Flag.ALTERNATIVE_ENGLISH) && translatedWord != null) {
                 String[] chunks = translatedWord.split("/");
                 Pattern p = Pattern.compile("\\(.*\\)");
-                Matcher m = p.matcher(chunks[chunks.length - 1]);
+                Matcher m = p.matcher(translatedWord);
 
                 if(m.find() && chunks.length > 1) {
                     translatedWord = chunks[0] + m.group(0);
