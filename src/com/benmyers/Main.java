@@ -15,6 +15,8 @@ public class Main {
 
     private static ArrayList<Flag> flags = new ArrayList<Flag>();
 
+    private static final boolean CONSICE_MODE = true;
+
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
@@ -24,19 +26,19 @@ public class Main {
         println("                    Version 0.1                    ");
         println("- - - - - - - - - - - - - - - - - - - - - - - - - -");
 
-        println("[!] Welcome to the Ancient Greek Translator!");
+        if(!CONSICE_MODE) println("[!] Welcome to the Ancient Greek Translator!");
 
         while(true) {
 
-            println("[!] Enter a Greek or English word or sentence.");
-            br();
+            if(!CONSICE_MODE) println("[!] Enter a Greek or English word or sentence.");
+            if(!CONSICE_MODE) br();
 
             print("> ");
             input = sc.nextLine();
 
-            br();
-            print("[!] Your input: ");
-            println("\"" + input + "\"");
+            if(!CONSICE_MODE) br();
+            if(!CONSICE_MODE) print("[!] Your input: ");
+            if(!CONSICE_MODE) println("\"" + input + "\"");
 
             Language lang = LanguageInterpreter.determineLanguage(input);
 
@@ -47,10 +49,10 @@ public class Main {
 
                 switch (lang) {
                     case ENG:
-                        println("[!] Input language detected: English");
+                        if(!CONSICE_MODE) println("[!] Input language detected: English");
                         break;
                     case GRK:
-                        println("[!] Input language detected: Greek");
+                        if(!CONSICE_MODE) println("[!] Input language detected: Greek");
                         break;
                     default:
                         break;
@@ -60,19 +62,19 @@ public class Main {
 
             if(input.contains("!a") || input.contains("!α")) {
                 flags.add(Flag.USING_ACCENTS);
-                println("[⚑] Flag: Strict Accents enabled");
+                if(!CONSICE_MODE) println("[⚑] Flag: Strict Accents enabled");
                 input = input.replaceAll("![aα]", "");
             }
 
             if(input.contains("!p") || input.contains("!π")) {
                 flags.add(Flag.PRONUNCIATION);
-                println("[⚑] Pronunciation enabled");
+                if(!CONSICE_MODE) println("[⚑] Pronunciation enabled");
                 input = input.replaceAll("![pπ]", "");
             }
 
             if(input.contains("!l") || input.contains("!λ")) {
                 flags.add(Flag.ALTERNATIVE_ENGLISH);
-                println("[⚑] English Alternatives enabled");
+                if(!CONSICE_MODE) println("[⚑] English Alternatives enabled");
                 input = input.replaceAll("![lλ]", "");
             }
 
@@ -85,16 +87,16 @@ public class Main {
 
             if (translator != null) {
 
-                println("[!] Found dictionary with " + translator.dictionary.size() + " total entries.");
+                if(!CONSICE_MODE) println("[!] Found dictionary with " + translator.dictionary.size() + " total entries.");
 
                 String output = translator.translate(input);
-                br();
+                if(!CONSICE_MODE) br();
 
-                println("[!] Translated output:");
+                if(!CONSICE_MODE) println("[!] Translated output:");
                 println("[✓] \"" + output + "\"");
 
                 if(flags.contains(Flag.PRONUNCIATION)) {
-                    println("[!] Pronunciation:");
+                    if(!CONSICE_MODE) println("[!] Pronunciation:");
                     println("[✓] \"" + ((GreekTranslator)translator).pronounce(input) + "\"");
                 }
             } else {
@@ -103,10 +105,11 @@ public class Main {
             }
 
             br();
-            print("[!] Press enter to start again. Type \"e\" or \"ε\" to exit. > ");
-            repeatCommand = sc.nextLine();
+            if(!CONSICE_MODE) print("[!] Press enter to start again. Type \"e\" or \"ε\" to exit. > ");
+            if(!CONSICE_MODE) repeatCommand = sc.nextLine();
+            else repeatCommand = "";
 
-            if(repeatCommand.contains("e") || repeatCommand.contains("ε")) System.exit(1);
+            if(repeatCommand.indexOf("e") == 0 || repeatCommand.indexOf("ε") == 0) System.exit(1);
 
             System.out.print("\033[H\033[2J");
             System.out.flush();

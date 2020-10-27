@@ -48,6 +48,7 @@ public class AccentRemover {
         input = input.replace('ἶ', 'ι');
         input = input.replace('ἷ', 'ι');
         input = input.replace('ῖ', 'ι');
+        input = input.replace('ἷ', 'ι');
         input = input.replace('ὶ', 'ι');
         input = input.replace('ἲ', 'ι');
         input = input.replace('ἳ', 'ι');
