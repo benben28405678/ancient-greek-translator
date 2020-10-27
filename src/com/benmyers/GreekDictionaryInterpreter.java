@@ -32,10 +32,7 @@ public class GreekDictionaryInterpreter {
                 if(grk.indexOf(".ω") >= 0) {
                     String stem = grk.replaceAll("\\..", "");
                     // α contract
-                    //System.out.println(stem);
-                    //System.out.println(AccentRemover.removeAccents(stem.substring(stem.length() - 1)));
                     if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("α")) {
-                        //System.out.println("a contract");
                         stem = stem.substring(0, stem.length() - 1);
                         if(flags.contains(Flag.USING_ACCENTS)) {
                             dictionary.put(stem + "ῶ", eng + " (1s)");
@@ -169,9 +166,11 @@ public class GreekDictionaryInterpreter {
 
             }
             sc.close();
-            for (Enumeration e = dictionary.keys(); e.hasMoreElements();) {
-                System.out.println(e.nextElement());
-            }
+            /*for (Enumeration e = dictionary.keys(); e.hasMoreElements();) {
+                Object f = e.nextElement();
+                System.out.println(f);
+                System.out.println(dictionary.get(f));
+            }*/
         } catch(FileNotFoundException e) {
             System.out.println("An error occurred.");
             e.printStackTrace();

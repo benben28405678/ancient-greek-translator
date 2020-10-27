@@ -2,6 +2,8 @@ package com.benmyers;
 
 import java.util.Dictionary;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class GreekTranslator extends Translator {
 
@@ -19,7 +21,16 @@ public class GreekTranslator extends Translator {
             if(word == " ") continue;
             String translatedWord = (String) dictionary.get(word);
             if(!flags.contains(Flag.ALTERNATIVE_ENGLISH) && translatedWord != null) {
-                translatedWord = translatedWord.split("/")[0];
+                String[] chunks = translatedWord.split("/");
+                Pattern p = Pattern.compile("\\(.*\\)");
+                Matcher m = p.matcher(chunks[chunks.length - 1]);
+
+                if(m.find() && chunks.length > 1) {
+                    translatedWord = chunks[0] + m.group(0);
+                } else {
+                    translatedWord = chunks[0];
+                }
+
             }
             if(translatedWord == null) translatedWord = word + "*";
             translatedWords.add(translatedWord);
