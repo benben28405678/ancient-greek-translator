@@ -6,6 +6,9 @@ public enum Flag {
     USING_ACCENTS,
 
     // Show pronunciation. -p or -π
-    PRONUNCIATION
+    PRONUNCIATION,
+
+    // Show all English translations of a Greek word, not just the first. -l or -λ
+    ALTERNATIVE_ENGLISH
 
 }

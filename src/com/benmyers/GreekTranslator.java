@@ -5,8 +5,9 @@ import java.util.ArrayList;
 
 public class GreekTranslator extends Translator {
 
-    public GreekTranslator(Dictionary dictionary) {
+    public GreekTranslator(Dictionary dictionary, ArrayList<Flag> flags) {
         super.dictionary = dictionary;
+        super.flags = flags;
     }
 
     @Override
@@ -17,6 +18,9 @@ public class GreekTranslator extends Translator {
         for(String word: words) {
             if(word == " ") continue;
             String translatedWord = (String) dictionary.get(word);
+            if(!flags.contains(Flag.ALTERNATIVE_ENGLISH) && translatedWord != null) {
+                translatedWord = translatedWord.split("/")[0];
+            }
             if(translatedWord == null) translatedWord = word + "*";
             translatedWords.add(translatedWord);
         }
@@ -84,6 +88,6 @@ public class GreekTranslator extends Translator {
         input = input.replaceAll("Ω", "Aw");
         input = input.replaceAll("ω", "aw");
 
-        return input;
+        return input.substring(0, input.length() - 1);
     }
 }

@@ -70,11 +70,17 @@ public class Main {
                 input = input.replaceAll("![pπ]", "");
             }
 
+            if(input.contains("!l") || input.contains("!λ")) {
+                flags.add(Flag.ALTERNATIVE_ENGLISH);
+                println("[⚑] English Alternatives enabled");
+                input = input.replaceAll("![lλ]", "");
+            }
+
             dictionaryInterpreter = new GreekDictionaryInterpreter(lang, flags);
 
             switch (lang) {
                 case GRK:
-                    translator = new GreekTranslator(dictionaryInterpreter.getDictionary());
+                    translator = new GreekTranslator(dictionaryInterpreter.getDictionary(), flags);
             }
 
             if (translator != null) {
