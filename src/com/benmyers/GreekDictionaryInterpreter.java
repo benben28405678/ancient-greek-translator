@@ -24,17 +24,6 @@ public class GreekDictionaryInterpreter {
                 String grk = keywords[0];
                 String eng = keywords[1];
 
-                // Nouns
-                String nounStem = null;
-                if(!grk.contains(".") && !grk.contains(",") && grk.length() >= 4) {
-                    if (grk.indexOf("ος") == grk.length() - 2 || grk.indexOf("οι") == grk.length() - 2 || grk.indexOf("ον") == grk.length() - 2 || grk.indexOf("ου") == grk.length() - 2 || grk.indexOf("ων") == grk.length() - 2)
-                        nounStem = grk.substring(0, grk.length() - 2);
-                    if (grk.indexOf("ω") == grk.length() - 1 || grk.indexOf("ε") == grk.length() - 1 || grk.indexOf("α") == grk.length() - 1)
-                        nounStem = grk.substring(0, grk.length() - 1);
-                    if (grk.indexOf("ους") == grk.length() - 3 || grk.indexOf("οις") == grk.length() - 3)
-                        nounStem = grk.substring(0, grk.length() - 3);
-                }
-
                 if(!flags.contains(Flag.USING_ACCENTS)) {
                     grk = AccentRemover.removeAccents(grk);
                 }
@@ -169,34 +158,50 @@ public class GreekDictionaryInterpreter {
                     continue;
                 }
 
+                // Nouns
+                if(grk.contains(";")) {
+                    if (grk.indexOf(";2a") >= 0) {
+                        String stem = grk.replaceAll("ος;2a|ον;2a|ου;2a|ους;2a|ου;2a|ων;2a|ω;2a|οις;2a|ε;2a|οι;2a", "");
+
+                        dictionary.put(stem + "ος", eng + " (2a nom s)");
+                        dictionary.put(stem + "οι", eng + " (2a nom pl)");
+                        dictionary.put(stem + "ον", eng + " (2a acc s)");
+                        dictionary.put(stem + "ους", eng + " (2a acc pl)");
+                        dictionary.put(stem + "ου", eng + " (2a gen s)");
+                        dictionary.put(stem + "ων", eng + " (2a gen pl)");
+                        dictionary.put(stem + "ω", eng + " (2a dat s)");
+                        dictionary.put(stem + "οις", eng + " (2a dat pl)");
+                        dictionary.put(stem + "ε", eng + " (2a voc)");
+                    } else if (grk.indexOf(";1b") >= 0) {
+                        String stem = grk.replaceAll("ον;2b|α;2b|ου;2b|ων;2b|ου;2b|ων;2b|ω;2b|οις;2b", "");
+
+                        dictionary.put(stem + "ον", eng + " (2b nom/acc s)");
+                        dictionary.put(stem + "α", eng + " (2b nom/acc pl)");
+                        dictionary.put(stem + "ου", eng + " (2b gen s)");
+                        dictionary.put(stem + "ων", eng + " (2b gen pl)");
+                        dictionary.put(stem + "ω", eng + " (2b dat s)");
+                        dictionary.put(stem + "οις", eng + " (2b dat pl)");
+                    } else {
+                        grk = grk.replaceAll(";..", "");
+                    }
+                }
+
                 switch(input) {
                     case ENG: dictionary.put(eng, grk); break;
                     case GRK: dictionary.put(grk, eng); break;
                     default: break;
                 }
 
-                if(nounStem != null) {
+
+                /*if(nounStem != null) {
                     if(!flags.contains(Flag.USING_ACCENTS)) nounStem = AccentRemover.removeAccents(nounStem);
 
                     // 2A
-                    dictionary.put(nounStem + "ος", eng + " (2a nom s)");
-                    dictionary.put(nounStem + "οι", eng + " (2a nom pl)");
-                    dictionary.put(nounStem + "ον", eng + " (2a acc s)");
-                    dictionary.put(nounStem + "ους", eng + " (2a acc pl)");
-                    dictionary.put(nounStem + "ου", eng + " (2a gen s)");
-                    dictionary.put(nounStem + "ων", eng + " (2a gen pl)");
-                    dictionary.put(nounStem + "ω", eng + " (2a dat s)");
-                    dictionary.put(nounStem + "οις", eng + " (2a dat pl)");
-                    dictionary.put(nounStem + "ε", eng + " (2a voc)");
+
 
                     // 2B
-                    dictionary.put(nounStem + "ον", eng + " (2a nom/acc s)");
-                    dictionary.put(nounStem + "α", eng + " (2a nom/acc pl)");
-                    dictionary.put(nounStem + "ου", eng + " (2a gen s)");
-                    dictionary.put(nounStem + "ων", eng + " (2a gen pl)");
-                    dictionary.put(nounStem + "ω", eng + " (2a dat s)");
-                    dictionary.put(nounStem + "οις", eng + " (2a dat pl)");
-                }
+
+                }*/
 
             }
             sc.close();

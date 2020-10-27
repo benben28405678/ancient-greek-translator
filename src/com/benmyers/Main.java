@@ -15,7 +15,7 @@ public class Main {
 
     private static ArrayList<Flag> flags = new ArrayList<Flag>();
 
-    private static final boolean CONSICE_MODE = true;
+    private static final boolean CONCISE_MODE = true;
 
     public static void main(String[] args) {
 
@@ -26,19 +26,19 @@ public class Main {
         println("                    Version 0.1                    ");
         println("- - - - - - - - - - - - - - - - - - - - - - - - - -");
 
-        if(!CONSICE_MODE) println("[!] Welcome to the Ancient Greek Translator!");
+        if(!CONCISE_MODE) println("[!] Welcome to the Ancient Greek Translator!");
 
         while(true) {
 
-            if(!CONSICE_MODE) println("[!] Enter a Greek or English word or sentence.");
-            if(!CONSICE_MODE) br();
+            if(!CONCISE_MODE) println("[!] Enter a Greek or English word or sentence.");
+            if(!CONCISE_MODE) br();
 
             print("> ");
             input = sc.nextLine();
 
-            if(!CONSICE_MODE) br();
-            if(!CONSICE_MODE) print("[!] Your input: ");
-            if(!CONSICE_MODE) println("\"" + input + "\"");
+            if(!CONCISE_MODE) br();
+            if(!CONCISE_MODE) print("[!] Your input: ");
+            if(!CONCISE_MODE) println("\"" + input + "\"");
 
             Language lang = LanguageInterpreter.determineLanguage(input);
 
@@ -49,10 +49,10 @@ public class Main {
 
                 switch (lang) {
                     case ENG:
-                        if(!CONSICE_MODE) println("[!] Input language detected: English");
+                        if(!CONCISE_MODE) println("[!] Input language detected: English");
                         break;
                     case GRK:
-                        if(!CONSICE_MODE) println("[!] Input language detected: Greek");
+                        if(!CONCISE_MODE) println("[!] Input language detected: Greek");
                         break;
                     default:
                         break;
@@ -62,19 +62,19 @@ public class Main {
 
             if(input.contains("!a") || input.contains("!α")) {
                 flags.add(Flag.USING_ACCENTS);
-                if(!CONSICE_MODE) println("[⚑] Flag: Strict Accents enabled");
+                if(!CONCISE_MODE) println("[⚑] Flag: Strict Accents enabled");
                 input = input.replaceAll("![aα]", "");
             }
 
             if(input.contains("!p") || input.contains("!π")) {
                 flags.add(Flag.PRONUNCIATION);
-                if(!CONSICE_MODE) println("[⚑] Pronunciation enabled");
+                if(!CONCISE_MODE) println("[⚑] Pronunciation enabled");
                 input = input.replaceAll("![pπ]", "");
             }
 
             if(input.contains("!l") || input.contains("!λ")) {
                 flags.add(Flag.ALTERNATIVE_ENGLISH);
-                if(!CONSICE_MODE) println("[⚑] English Alternatives enabled");
+                if(!CONCISE_MODE) println("[⚑] English Alternatives enabled");
                 input = input.replaceAll("![lλ]", "");
             }
 
@@ -87,16 +87,16 @@ public class Main {
 
             if (translator != null) {
 
-                if(!CONSICE_MODE) println("[!] Found dictionary with " + translator.dictionary.size() + " total entries.");
+                if(!CONCISE_MODE) println("[!] Found dictionary with " + translator.dictionary.size() + " total entries.");
 
                 String output = translator.translate(input);
-                if(!CONSICE_MODE) br();
+                if(!CONCISE_MODE) br();
 
-                if(!CONSICE_MODE) println("[!] Translated output:");
+                if(!CONCISE_MODE) println("[!] Translated output:");
                 println("[✓] \"" + output + "\"");
 
                 if(flags.contains(Flag.PRONUNCIATION)) {
-                    if(!CONSICE_MODE) println("[!] Pronunciation:");
+                    if(!CONCISE_MODE) println("[!] Pronunciation:");
                     println("[✓] \"" + ((GreekTranslator)translator).pronounce(input) + "\"");
                 }
             } else {
@@ -105,8 +105,8 @@ public class Main {
             }
 
             br();
-            if(!CONSICE_MODE) print("[!] Press enter to start again. Type \"e\" or \"ε\" to exit. > ");
-            if(!CONSICE_MODE) repeatCommand = sc.nextLine();
+            if(!CONCISE_MODE) print("[!] Press enter to start again. Type \"e\" or \"ε\" to exit. > ");
+            if(!CONCISE_MODE) repeatCommand = sc.nextLine();
             else repeatCommand = "";
 
             if(repeatCommand.indexOf("e") == 0 || repeatCommand.indexOf("ε") == 0) System.exit(1);

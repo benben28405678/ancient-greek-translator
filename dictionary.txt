@@ -50,21 +50,21 @@
 # Chapter 1
 #
 # Section A, B --------------------------------------------------------------------------------
-ἀκρόπολις - acropolis
+ἀκρόπολις;3e - acropolis
 ἆρα - ?
 βαίν.ω - come/go/walk
-γῆ - land
+γῆ;1a - land
 δέ - and/but
 δεῦρο - over here
 ἐγώ - I
 ἔπειτα - then/next
 καί - and/also
 καλο,ός - beautiful/fine/good
-ναύτης - sailor
+ναύτης;1d - sailor
 νεώριον - dockyard
-Παρθενών - Parthenon
-πλοῖον - vessel/ship
-ῥαψωδός - rhapsode
+Παρθενών;3a - Parthenon
+πλοῖον;2b - vessel/ship
+ῥαψωδός;2a - rhapsode
 σύ - you (s)
 τίς - what?/who?
 ὦ - O
@@ -108,29 +108,29 @@
 #
 # Section G --------------------------------------------------------------------------------
 αναβαίν.ω - go up
-ἄνθρωπος - man/fellow
+ἄνθρωπος;2a - man/fellow
 ἀποθνήσκ.ω - die
 ἀποχωρέω - go away/depart
 γε - at least/at any rate
 διὰ τί - why?
-δύω - sink
+δύ.ω - sink
 ἐλθ.έ - come!/go!
-ἐμπόριον - marketplace
-ἔργον - task/work/job/duty
+ἐμπόριον;2b - marketplace
+ἔργον;2b - task/work/job/duty
 ἔχ.ω - have/hold
 ἡμέτερος - our (s)
-θάλαττα - sea
+θάλαττα;1c - sea
 κακός - bad/evil/cowardly/lowly/mean
-κυβερνήτης - captain/helmsman
+κυβερνήτης;1d - captain/helmsman
 λέγ.ω - say
-λέμβος - boat/lifeboat
+λέμβος;2a - boat/lifeboat
 νῦν - now
 πλέ.ω - sail
 ῥίπτ.ω - throw/hurl
 σώζ.ω - save/keep safe
 σῶος - safe
-σωτηρίᾱ - safety/salvation
-φίλος - friend
+σωτηρίᾱ;1b - safety/salvation
+φίλος;2a - friend
 φροντίζω - think/worry
 #
 # Section H, I, J --------------------------------------------------------------------------------
@@ -150,8 +150,8 @@
 περί - about
 πολλά - many things
 πῶς γὰρ οὔ - of course
-στρατηγός - general
-τὰ ναυτικά - naval matters
-τὰ στρατηγικά - leadership/generalship
-τὰ στρατιωτικά - military matters
+στρατηγός;2a - general
+ναυτικά - naval matters
+στρατηγικά - leadership/generalship
+στρατιωτικά - military matters
 #
