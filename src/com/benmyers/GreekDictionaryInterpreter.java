@@ -41,12 +41,14 @@ public class GreekDictionaryInterpreter {
                             dictionary.put(stem + "ῶμεν", eng + " (1pl)");
                             dictionary.put(stem + "ᾶτε", eng + " (2pl)");
                             dictionary.put(stem + "ῶσι", eng + " (3pl)");
+                            dictionary.put(stem + "α", eng + " (imp s)");
+                            dictionary.put(stem + "ᾶτε", eng + " (imp pl)");
                         } else {
                             dictionary.put(stem + "ω", eng + " (1s)");
                             dictionary.put(stem + "ας", eng + " (2s)");
-                            dictionary.put(stem + "α", eng + " (3s)");
+                            dictionary.put(stem + "α", eng + " (3s or imp s)");
                             dictionary.put(stem + "ωμεν", eng + " (1pl)");
-                            dictionary.put(stem + "ατε", eng + " (2pl)");
+                            dictionary.put(stem + "ατε", eng + " (2pl or imp pl)");
                             dictionary.put(stem + "ωσι", eng + " (3pl)");
                         }
                     }
@@ -58,14 +60,15 @@ public class GreekDictionaryInterpreter {
                             dictionary.put(stem + "εῖς", eng + " (2s)");
                             dictionary.put(stem + "εῖ", eng + " (3s)");
                             dictionary.put(stem + "οῦμεν", eng + " (1pl)");
-                            dictionary.put(stem + "εῖτε", eng + " (2pl)");
+                            dictionary.put(stem + "εῖτε", eng + " (2pl or imp pl)");
                             dictionary.put(stem + "οῦσι", eng + " (3pl)");
+                            dictionary.put(stem + "ει", eng + " (imp s)");
                         } else {
                             dictionary.put(stem + "ω", eng + " (1s)");
                             dictionary.put(stem + "εις", eng + " (2s)");
-                            dictionary.put(stem + "ει", eng + " (3s)");
+                            dictionary.put(stem + "ει", eng + " (3s or imp s)");
                             dictionary.put(stem + "ουμεν", eng + " (1pl)");
-                            dictionary.put(stem + "ειτε", eng + " (2pl)");
+                            dictionary.put(stem + "ειτε", eng + " (2pl or imp pl)");
                             dictionary.put(stem + "ουσι", eng + " (3pl)");
                         }
                     }
@@ -77,15 +80,17 @@ public class GreekDictionaryInterpreter {
                             dictionary.put(stem + "οῖς", eng + " (2s)");
                             dictionary.put(stem + "οῖ", eng + " (3s)");
                             dictionary.put(stem + "οῦμεν", eng + " (1pl)");
-                            dictionary.put(stem + "οῦτε", eng + " (2pl)");
+                            dictionary.put(stem + "οῦτε", eng + " (2pl or imp pl)");
                             dictionary.put(stem + "οῦσι", eng + " (3pl)");
+                            dictionary.put(stem + "ου", eng + " (imp s)");
                         } else {
                             dictionary.put(stem + "ω", eng + " (1s)");
                             dictionary.put(stem + "οις", eng + " (2s)");
                             dictionary.put(stem + "οι", eng + " (3s)");
                             dictionary.put(stem + "ουμεν", eng + " (1pl)");
-                            dictionary.put(stem + "ουτε", eng + " (2pl)");
+                            dictionary.put(stem + "ουτε", eng + " (2pl or imp pl)");
                             dictionary.put(stem + "ουσι", eng + " (3pl)");
+                            dictionary.put(stem + "ου", eng + " (imp s)");
                         }
                     }
                     // Uncontracted
@@ -94,9 +99,10 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "εις", eng + " (2s)");
                         dictionary.put(stem + "ει", eng + " (3s)");
                         dictionary.put(stem + "ομεν", eng + " (1pl)");
-                        dictionary.put(stem + "ετε", eng + " (2pl)");
+                        dictionary.put(stem + "ετε", eng + " (2pl or imp pl)");
                         dictionary.put(stem + "ουοι", eng + " (3pl)");
                         dictionary.put(stem + "ουοιν", eng + " (3pl)");
+                        dictionary.put(stem + "ε", eng + " (imp s)");
                     }
                     continue;
                 }

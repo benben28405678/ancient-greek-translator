@@ -5,6 +5,7 @@
 # english word/english alternative
 # "." in Greek word implies a verb declension
 # "," in Greek word implies an adj. declension
+# ";" after Greek word implies a noun declension
 #
 #
 # Grammar
