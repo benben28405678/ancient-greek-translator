@@ -30,6 +30,8 @@ public class Main {
 
         while(true) {
 
+            flags = new ArrayList<Flag>();
+
             if(!CONCISE_MODE) println("[!] Enter a Greek or English word or sentence.");
             if(!CONCISE_MODE) br();
 
