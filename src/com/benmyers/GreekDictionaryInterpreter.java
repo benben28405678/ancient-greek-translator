@@ -28,7 +28,7 @@ public class GreekDictionaryInterpreter {
                     grk = AccentRemover.removeAccents(grk);
                 }
 
-                // Verbs
+                // Active Verbs
                 if(grk.indexOf(".ω") >= 0) {
                     String stem = grk.replaceAll("\\..", "");
                     // α contract
@@ -103,6 +103,95 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "ουοι", eng + " (3pl)");
                         dictionary.put(stem + "ουοιν", eng + " (3pl)");
                         dictionary.put(stem + "ε", eng + " (imp s)");
+                    }
+                    continue;
+                }
+
+                // Middle Verbs
+                if(grk.indexOf(".ομαι") >= 0) {
+                    String stem = grk.replaceAll("\\.....", "");
+                    // α contract
+                    if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("α")) {
+                        stem = stem.substring(0, stem.length() - 1);
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                            dictionary.put(stem + "ῶμαι", eng + " (1s)");
+                            dictionary.put(stem + "ᾶ", eng + " (2s)");
+                            dictionary.put(stem + "ᾶται", eng + " (3s)");
+                            dictionary.put(stem + "ῶμεθα", eng + " (1pl)");
+                            dictionary.put(stem + "ᾶσθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "ῶνται", eng + " (3pl)");
+                            dictionary.put(stem + "ῶ", eng + " (imp s)");
+                        } else {
+                            dictionary.put(stem + "ωμαι", eng + " (1s)");
+                            dictionary.put(stem + "α", eng + " (2s)");
+                            dictionary.put(stem + "αται", eng + " (3s)");
+                            dictionary.put(stem + "ωμεθα", eng + " (1pl)");
+                            dictionary.put(stem + "ασθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "ωνται", eng + " (3pl)");
+                            dictionary.put(stem + "ω", eng + " (imp s)");
+                        }
+                    }
+                    // ε contract
+                    else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ε")) {
+                        stem = stem.substring(0, stem.length() - 1);
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                            dictionary.put(stem + "οῦμαι", eng + " (1s)");
+                            dictionary.put(stem + "ῆ", eng + " (2s)");
+                            dictionary.put(stem + "εῖται", eng + " (3s)");
+                            dictionary.put(stem + "ούμεθα", eng + " (1pl)");
+                            dictionary.put(stem + "εῖσθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "οῦνται", eng + " (3pl)");
+                            dictionary.put(stem + "οῦ", eng + " (imp s)");
+                        } else {
+                            dictionary.put(stem + "ουμαι", eng + " (1s)");
+                            dictionary.put(stem + "η", eng + " (2s)");
+                            dictionary.put(stem + "ειται", eng + " (3s)");
+                            dictionary.put(stem + "ουμεθα", eng + " (1pl)");
+                            dictionary.put(stem + "εισθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "ουνται", eng + " (3pl)");
+                            dictionary.put(stem + "ου", eng + " (imp s)");
+                        }
+                    }
+                    // ο contract
+                    else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ο")) {
+                        stem = stem.substring(0, stem.length() - 1);
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                            dictionary.put(stem + "οῦμαι", eng + " (1s)");
+                            dictionary.put(stem + "οῖ", eng + " (2s)");
+                            dictionary.put(stem + "οῦται", eng + " (3s)");
+                            dictionary.put(stem + "ούμεθα", eng + " (1pl)");
+                            dictionary.put(stem + "οῦσθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "οῦνται", eng + " (3pl)");
+                            dictionary.put(stem + "οῦ", eng + " (imp s)");
+                        } else {
+                            dictionary.put(stem + "ουμαι", eng + " (1s)");
+                            dictionary.put(stem + "οι", eng + " (2s)");
+                            dictionary.put(stem + "ουται", eng + " (3s)");
+                            dictionary.put(stem + "ουμεθα", eng + " (1pl)");
+                            dictionary.put(stem + "ουσθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "οθνται", eng + " (3pl)");
+                            dictionary.put(stem + "ου", eng + " (imp s)");
+                        }
+                    }
+                    // Uncontracted
+                    else {
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                            dictionary.put(stem + "ομαι", eng + " (1s)");
+                            dictionary.put(stem + "η", eng + " (2s)");
+                            dictionary.put(stem + "εται", eng + " (3s)");
+                            dictionary.put(stem + "όμεθα", eng + " (1pl)");
+                            dictionary.put(stem + "εσθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "ονται", eng + " (3pl)");
+                            dictionary.put(stem + "ου", eng + " (imp s)");
+                        } else {
+                            dictionary.put(stem + "ομαι", eng + " (1s)");
+                            dictionary.put(stem + "η", eng + " (2s)");
+                            dictionary.put(stem + "εται", eng + " (3s)");
+                            dictionary.put(stem + "ομεθα", eng + " (1pl)");
+                            dictionary.put(stem + "εσθε", eng + " (2pl or imp pl)");
+                            dictionary.put(stem + "ονται", eng + " (3pl)");
+                            dictionary.put(stem + "ου", eng + " (imp s)");
+                        }
                     }
                     continue;
                 }
