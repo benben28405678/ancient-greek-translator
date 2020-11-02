@@ -54,6 +54,7 @@
 οὐκ - not
 οὐχ - not
 μἠ - don't
+#
 # Chapter 1
 #
 # Section A, B --------------------------------------------------------------------------------
@@ -73,12 +74,14 @@
 πλοῖον;2b - vessel/ship
 ῥαψωδός;2a - rhapsode
 σύ - you (s)
+τε - both
 τίς - what?/who?
 ὦ - O
 #
 # Section C, D --------------------------------------------------------------------------------
 ἀκού.ω - hear/listen
 ἀληυῆ - the truth
+ἀληΘῆ - the truth
 ἀλλά - but/alternatively
 βλέπ.ω - look at
 γάρ - for/because
@@ -201,7 +204,7 @@
 λόγος;2a - story/tale
 μάχ.ομαι - fight
 ναυμαχίᾱ;1b - naval battle
-νῑκάω - win/defeat
+νῑκά.ω - win/defeat
 νῑκη;1a - victory/conquest
 ὁμόνοια;1b - agreement/harmony
 ὅσ,ος - how great!
@@ -209,7 +212,7 @@
 οὕτω - thus/so
 οὕτως - thus/so
 παρά - along/alongside
-πῑπτω - fall/die
+πῑπτ.ω - fall/die
 πολέμιοι;2a - the enemy
 πολέμι,ος - hostile/enemy
 πόλεμος;2a - war
