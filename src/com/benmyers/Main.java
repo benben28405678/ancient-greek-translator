@@ -80,6 +80,12 @@ public class Main {
                 input = input.replaceAll("![lλ]", "");
             }
 
+            if(input.contains("!s") || input.contains("!σ")) {
+                flags.add(Flag.ALIGN);
+                if(!CONCISE_MODE) println("[⚑] Align enabled");
+                input = input.replaceAll("![sσ]", "");
+            }
+
             dictionaryInterpreter = new GreekDictionaryInterpreter(lang, flags);
 
             switch (lang) {
@@ -90,12 +96,18 @@ public class Main {
             if (translator != null) {
 
                 if(!CONCISE_MODE) println("[!] Found dictionary with " + translator.dictionary.size() + " total entries.");
-
-                String output = translator.translate(input);
                 if(!CONCISE_MODE) br();
 
                 if(!CONCISE_MODE) println("[!] Translated output:");
-                println("[✓] \"" + output + "\"");
+
+                if(flags.contains(Flag.ALIGN)) {
+                    String[] output = translator.alignAndTranslate(input);
+                    println("[✓] " + output[0]);
+                    println("[✓] " + output[1]);
+                } else {
+                    String output = translator.translate(input);
+                    println("[✓] \"" + output + "\"");
+                }
 
                 if(flags.contains(Flag.PRONUNCIATION)) {
                     if(!CONCISE_MODE) println("[!] Pronunciation:");

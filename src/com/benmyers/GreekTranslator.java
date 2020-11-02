@@ -14,7 +14,7 @@ public class GreekTranslator extends Translator {
 
     @Override
     public String translate(String input) {
-        String[] words = input.split("[ .;:!]");
+        String[] words = input.split(" ");
         ArrayList<String> translatedWords = new ArrayList<String>();
 
         for(String word: words) {
@@ -100,5 +100,54 @@ public class GreekTranslator extends Translator {
         input = input.replaceAll("ω", "aw");
 
         return input.substring(0, input.length() - 1);
+    }
+
+    @Override
+    public String[] alignAndTranslate(String input) {
+        String[] words = input.split(" ");
+        ArrayList<String> translatedWords = new ArrayList<String>();
+
+        for(String word: words) {
+            if(word == " ") continue;
+            String translatedWord = (String) dictionary.get(word);
+            if(!flags.contains(Flag.ALTERNATIVE_ENGLISH) && translatedWord != null) {
+                String[] chunks = translatedWord.split("/");
+                Pattern p = Pattern.compile("\\(.*\\)");
+                Matcher m = p.matcher(translatedWord);
+
+                if(m.find() && chunks.length > 1) {
+                    translatedWord = chunks[0] + " "+ m.group(0);
+                } else {
+                    translatedWord = chunks[0];
+                }
+
+            }
+            if(translatedWord == null) translatedWord = word + "*";
+            translatedWords.add(translatedWord);
+        }
+
+        String alignedInput = "", alignedOutput = "";
+
+        for(int i = 0; i < translatedWords.size() && i < words.length; i++) {
+            String inputWord = words[i], outputWord = translatedWords.get(i);
+            if(inputWord.length() > outputWord.length()) {
+                alignedInput += inputWord;
+                while(outputWord.length() < inputWord.length()) outputWord += " ";
+                alignedOutput += outputWord;
+            } else if(inputWord.length() < outputWord.length()) {
+                alignedOutput += outputWord;
+                while(inputWord.length() < outputWord.length()) inputWord += " ";
+                alignedInput += inputWord;
+            }
+
+            alignedInput += " "; alignedOutput += " ";
+        }
+
+        alignedInput = alignedInput.substring(0, alignedInput.length() - 1);
+        alignedOutput = alignedOutput.substring(0, alignedOutput.length() - 1);
+
+        String[] toReturn = {alignedInput, alignedOutput};
+
+        return toReturn;
     }
 }
