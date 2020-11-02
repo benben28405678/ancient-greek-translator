@@ -11,7 +11,7 @@ public enum Flag {
     // Show all English translations of a Greek word, not just the first. !l or !λ
     ALTERNATIVE_ENGLISH,
 
-    // Align translations. !s or !σ
+    // Disables align translations. !s or !σ
     ALIGN
 
 }

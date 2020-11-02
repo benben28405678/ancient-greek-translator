@@ -82,7 +82,7 @@ public class Main {
 
             if(input.contains("!s") || input.contains("!σ")) {
                 flags.add(Flag.ALIGN);
-                if(!CONCISE_MODE) println("[⚑] Align enabled");
+                if(!CONCISE_MODE) println("[⚑] Align disabled");
                 input = input.replaceAll("![sσ]", "");
             }
 
@@ -100,7 +100,7 @@ public class Main {
 
                 if(!CONCISE_MODE) println("[!] Translated output:");
 
-                if(flags.contains(Flag.ALIGN)) {
+                if(!flags.contains(Flag.ALIGN)) {
                     String[] output = translator.alignAndTranslate(input);
                     println("[✓] " + output[0]);
                     println("[✓] " + output[1]);
