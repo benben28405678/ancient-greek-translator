@@ -168,7 +168,7 @@
 στρατιωτικά - military matters
 #
 # Chapter 2
-# Section A, B, C, D
+# Section A, B, C, D --------------------------------------------------------------------------------
 ἀγαθ,ός - good/noble/courageous
 Αθηναῖος;2a - Athenian
 ἅμα - at the same time
@@ -178,6 +178,7 @@
 αἶθις - again
 βάρβαρος;2a - barbarian/foreigner
 βέβαι,ος - secure
+βοή;1a - shout
 βραδέως - slowly
 διά - because of
 διέρχ.ομαι - go through/relate

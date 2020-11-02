@@ -276,7 +276,63 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "ων", eng + " (2b gen pl)");
                         dictionary.put(stem + "ω", eng + " (2b dat s)");
                         dictionary.put(stem + "οις", eng + " (2b dat pl)");
-                    } else {
+                    } else if (grk.indexOf(";1a") >= 0) {
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                        } else {
+                            String stem = grk.replaceAll("η;1a|ην;1a|ης;1a|η;1a|αι;1a|ας;1a|ων;1a|αις;1a", "");
+
+                            dictionary.put(stem + "η", eng + " (1a nom/dat s)");
+                            dictionary.put(stem + "ην", eng + " (1a acc s)");
+                            dictionary.put(stem + "ης", eng + " (1a gen s)");
+                            dictionary.put(stem + "αι", eng + " (1a nom pl)");
+                            dictionary.put(stem + "ας", eng + " (1a acc pl)");
+                            dictionary.put(stem + "ων", eng + " (1a gen pl)");
+                            dictionary.put(stem + "αις", eng + " (1a dat pl)");
+                        }
+                    } else if (grk.indexOf(";1b") >= 0) {
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                        } else {
+                            String stem = grk.replaceAll("α;1b|αν;1b|ας;1b|α;1b|αι;1b|ας;1b|ων;1b|αις;1b", "");
+
+                            dictionary.put(stem + "α", eng + " (1b nom/dat s)");
+                            dictionary.put(stem + "αν", eng + " (1b acc s)");
+                            dictionary.put(stem + "ας", eng + " (1b gen s)");
+                            dictionary.put(stem + "αι", eng + " (1b nom pl)");
+                            dictionary.put(stem + "ας", eng + " (1b acc pl)");
+                            dictionary.put(stem + "ων", eng + " (1b gen pl)");
+                            dictionary.put(stem + "αις", eng + " (1b dat pl)");
+                        }
+                    } else if (grk.indexOf(";1c") >= 0) {
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                        } else {
+                            String stem = grk.replaceAll("α;1c|αν;1c|ης;1c|η;1c|αι;1c|ας;1c|ων;1c|αις;1c", "");
+
+                            dictionary.put(stem + "α", eng + " (1c nom s)");
+                            dictionary.put(stem + "αν", eng + " (1c acc s)");
+                            dictionary.put(stem + "ης", eng + " (1c gen s)");
+                            dictionary.put(stem + "η", eng + " (1c dat s)");
+                            dictionary.put(stem + "αι", eng + " (1c nom pl)");
+                            dictionary.put(stem + "ας", eng + " (1c acc pl)");
+                            dictionary.put(stem + "ων", eng + " (1c gen pl)");
+                            dictionary.put(stem + "αις", eng + " (1c dat pl)");
+                        }
+                    } else if (grk.indexOf(";1d") >= 0) {
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                        } else {
+                            String stem = grk.replaceAll("ς;1d|ην;1d|ου;1d|η;1d|α;1d|αι;1d|ας;1d|ων;1d|αις;1d", "");
+
+                            dictionary.put(stem + "ς", eng + " (1d nom s)");
+                            dictionary.put(stem + "ην", eng + " (1d acc s)");
+                            dictionary.put(stem + "ου", eng + " (1d gen s)");
+                            dictionary.put(stem + "η", eng + " (1d dat s)");
+                            dictionary.put(stem + "α", eng + " (1d nom pl)");
+                            dictionary.put(stem + "αι", eng + " (1d acc pl)");
+                            dictionary.put(stem + "ας", eng + " (1d gen pl)");
+                            dictionary.put(stem + "ων", eng + " (1d dat pl)");
+                            dictionary.put(stem + "αις", eng + " (1d voc)");
+                        }
+                    }
+                    else {
                         grk = grk.replaceAll(";..", "");
                     }
                 }
