@@ -107,7 +107,7 @@
 κακ,ος - bad/evil
 καλ,ος - fine/beautiful
 μέν - one one hand
-δέ - on the other hand
+δέ - but
 οἴμοι - alas!/oh dear!
 ὁρά.ω - see
 ποῖ - to where?
@@ -229,3 +229,4 @@
 φοβέ.ομαι - fear/be afraid of
 ψευδῶς - falsely
 ὥσπερ - like/as//
+# Noted issue: fall die πιπτουσι
