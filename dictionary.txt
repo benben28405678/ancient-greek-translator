@@ -132,7 +132,7 @@
 ἐμπόριον;2b - marketplace
 ἔργον;2b - task/work/job/duty
 ἔχ.ω - have/hold
-ἡμέτερος - our (s)
+ἡμέτερ,ος - our (s)
 θάλαττα;1c - sea
 κακός - bad/evil/cowardly/lowly/mean
 κυβερνήτης;1d - captain/helmsman
@@ -175,7 +175,7 @@
 ἀγαθ,ός - good/noble/courageous
 Αθηναῖος;2a - Athenian
 ἅμα - at the same time
-ἀναχωρέω - retreat
+ἀναχωρέ.ω - retreat
 ἀπορέ.ω - be at a loss/have no resources
 ἀπορίᾱ;1b - perplexity/lack of provisions
 αἶθις - again
@@ -228,5 +228,5 @@
 τολμάω - dare/be daring/undertake
 φοβέ.ομαι - fear/be afraid of
 ψευδῶς - falsely
-ὥσπερ - like/as//
+ὥσπερ - like/as
 # Noted issue: fall die πιπτουσι
