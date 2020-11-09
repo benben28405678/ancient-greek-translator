@@ -229,4 +229,23 @@
 φοβέ.ομαι - fear/be afraid of
 ψευδῶς - falsely
 ὥσπερ - like/as
-# Noted issue: fall die πιπτουσι
+#
+# Chapter 3
+# Section A, B --------------------------------------------------------------------------------
+ανήρ - man (3a nom s)
+γείτων - neighbour (3a nom s)
+λαμπάς - torch (3a nom s)
+λιμήν - harbour (3a nom s)
+νύζ - night (3a nom s)
+παῖς - child/slave (3a nom s)
+πατρίς - fatherland (3a nom s)
+σωτήρ - saviour (3a nom s)
+γείτων - neighbour
+ἀνδρ;3a - man
+γειτον;3a - neighbour
+λαμπαδ;3a - torch
+λιμεν;3a - harbour
+νυκτ;3a - night
+παιδ;3a - child/slave
+πατριδ;3a - fatherland
+σωτηρ;3a - saviour
