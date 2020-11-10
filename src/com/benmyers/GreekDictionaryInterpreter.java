@@ -319,7 +319,7 @@ public class GreekDictionaryInterpreter {
                     } else if (grk.indexOf(";1d") >= 0) {
                         if(flags.contains(Flag.USING_ACCENTS)) {
                         } else {
-                            String stem = grk.replaceAll("ς;1d|ην;1d|ου;1d|η;1d|α;1d|αι;1d|ας;1d|ων;1d|αις;1d", "");
+                            String stem = grk.replaceAll("ης;1d|ην;1d|ου;1d|η;1d|α;1d|αι;1d|ας;1d|ων;1d|αις;1d", "");
 
                             dictionary.put(stem + "ς", eng + " (1d nom s)");
                             dictionary.put(stem + "ην", eng + " (1d acc s)");

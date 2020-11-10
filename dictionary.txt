@@ -48,6 +48,26 @@
 ἴσασι - they know
 ἴσασιν - they know
 #
+# Personal Pronouns --------------------------------------------------------------------------------
+με - I (acc)
+ἐμέ - I (acc)
+μου - I (gen)
+ἐμοῦ - I (gen)
+μοι - I (dat)
+ἐμοί - I (dat)
+σύ - you (nom)
+σέ - you (acc)
+σοῦ - you (gen)
+σοί - you (dat)
+ἠμεῖς - we (nom)
+ἠμᾶς - we (acc)
+ἠμῶν - we (gen)
+ἠμῖν - we (dat)
+ῡμεῖς - you all (nom)
+ῡμᾶς - you all (acc)
+ῡμῶν - you all (gen)
+ῡμῖν - you all (dat)
+#
 #
 # Negatives --------------------------------------------------------------------------------
 οὐ - not
@@ -86,7 +106,7 @@
 βλέπ.ω - look at
 γάρ - for/because
 διώκ.ω - chase/pursue
-ἔγωγωε - I at least/at any rate
+ἔγωγε - I at least/at any rate
 εἰσβαίν.ω - enter/board
 ἡμεῖς - we
 καταβαίν.ω - go/come down
@@ -178,7 +198,7 @@
 ἀναχωρέ.ω - retreat
 ἀπορέ.ω - be at a loss/have no resources
 ἀπορίᾱ;1b - perplexity/lack of provisions
-αἶθις - again
+αὖθις - again
 βάρβαρος;2a - barbarian/foreigner
 βέβαι,ος - secure
 βοή;1a - shout
@@ -231,7 +251,17 @@
 ὥσπερ - like/as
 #
 # Chapter 3
-# Section A, B --------------------------------------------------------------------------------
+# Section A --------------------------------------------------------------------------------
+ἄγε - come!
+ἀφικωέ.ομαι - arrive/come
+ἐρωτά.ω - ask
+ἰδού - look!/here!/hey!
+κίνδῡνος;2a - danger
+ωῆσος;2a - island
+πόθεν - from where?
+πυρά;2b - fire signal
+σπεύδ.ω - hurry
+χωρέ.ω - go/come
 ανήρ - man (3a nom s)
 γείτων - neighbour (3a nom s)
 λαμπάς - torch (3a nom s)
@@ -249,3 +279,30 @@
 παιδ;3a - child/slave
 πατριδ;3a - fatherland
 σωτηρ;3a - saviour
+#
+# Section B --------------------------------------------------------------------------------
+δεινός - terrible/dire/clever
+εὖ - well
+ἠμεῖς - we
+θεᾱ.ομαι - watch/gaze at
+θόρυβος;2a - noise/din/hustle and bustle
+οἰκίᾱ;1b - house
+οἴλαδε - homewards
+ὄπλα;2b - weapons
+πορεύομαι - march/journey
+σύ - you (s)
+ῡμεῖς - you (pl)
+φαίν.ομαι - appear/seem
+#
+# Section C --------------------------------------------------------------------------------
+ἀλλήλους;2a - each other/one another
+ἄλλος - other/the rest of
+ἐγγύς - near/nearby
+εἰπέ - speak!/tell me!
+ἐπειδή - when/since/because
+κατά - in/on/by/according to
+Λακεδαιμόνιος;2a - Spartan
+λαμβάν.ω - take/capture
+ναυτικός;2a - story/tale/word/speech
+οὐδέ - and not/not even
+τέχνη;1a - skill/art/expertise
