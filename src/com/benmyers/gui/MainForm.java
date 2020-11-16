@@ -1,13 +1,13 @@
 package com.benmyers.gui;
 
 import javax.swing.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.util.Arrays;
 
 public class MainForm {
+
     private JPanel mainPanel;
     private JLabel titleLabel;
-    private JComboBox translationModeBox;
+    protected JComboBox<String> translationModeBox;
     private JLabel outputLabel;
     private JPanel inputPanel;
     private JTextArea inputTextArea;
@@ -29,8 +29,7 @@ public class MainForm {
 
     public MainForm() {
 
-        translationModeBox.addItem("Greek > English");
-        translationModeBox.addItem("English > Greek");
+        for (String s : Arrays.asList("Greek > English", "English > Greek")) translationModeBox.addItem(s);
 
         translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputTextArea, logTextArea, enableLoggingCheckBox));
         translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea));

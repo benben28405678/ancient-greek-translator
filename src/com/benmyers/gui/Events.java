@@ -14,11 +14,10 @@ public class Events {
         } else {
             if(logTextArea.getText().equals("")) {
                 logTextArea.setText(outputTextArea.getText());
-                outputTextArea.setText(inputTextArea.getText());
             } else {
                 logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
-                outputTextArea.setText(inputTextArea.getText());
             }
+            outputTextArea.setText(inputTextArea.getText());
         }
     }
 
