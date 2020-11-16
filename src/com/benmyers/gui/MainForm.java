@@ -38,6 +38,7 @@ public class MainForm {
         translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputTextArea, logTextArea, enableLoggingCheckBox, translator));
         translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea, translator));
         clearButton.addActionListener(Listeners.clearLogButtonListener(logTextArea, outputTextArea));
+        saveToFileButton.addActionListener(Listeners.saveLogButtonListener(logTextArea, mainPanel));
     }
 
     public static void main(GreekDictionaryInterpreter interpreter, Translator translator) {

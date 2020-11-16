@@ -25,4 +25,8 @@ public class Listeners {
     public static ActionListener clearLogButtonListener(JTextArea logTextArea, JTextArea outputTextArea) {
         return e -> Events.clearLog(logTextArea, outputTextArea);
     }
+
+    public static ActionListener saveLogButtonListener(JTextArea logTextArea, JPanel parent) {
+        return e -> Events.saveLog(logTextArea, parent);
+    }
 }
