@@ -35,4 +35,9 @@ public class Events {
             logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
         }
     }
+
+    public static void clearLog(JTextArea log, JTextArea output) {
+        log.setText("");
+        output.setText("");
+    }
 }

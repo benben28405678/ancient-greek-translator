@@ -21,4 +21,8 @@ public class Listeners {
     public static ActionListener translateAndLogButtonListener(JTextArea inputTextArea, JTextArea outputTextArea, JTextArea logTextArea, Translator translator) {
         return e -> Events.translateAndLog(inputTextArea, outputTextArea, logTextArea, translator);
     }
+
+    public static ActionListener clearLogButtonListener(JTextArea logTextArea, JTextArea outputTextArea) {
+        return e -> Events.clearLog(logTextArea, outputTextArea);
+    }
 }
