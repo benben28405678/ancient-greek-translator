@@ -3,8 +3,8 @@ package com.benmyers;
 import com.benmyers.gui.LookAndFeelManager;
 import com.benmyers.gui.MainForm;
 
-import javax.swing.*;
-import java.awt.*;
+//import javax.swing.*;
+//import java.awt.*;
 
 public class Main {
 
@@ -139,7 +139,7 @@ public class Main {
             System.out.print("\033[H\033[2J");
             System.out.flush();*/
 
-    private static void print(String s) {
+    /*private static void print(String s) {
         System.out.print(s);
     }
 
@@ -165,6 +165,6 @@ public class Main {
 
     private static void br() {
         println("");
-    }
+    }*/
 
 }
