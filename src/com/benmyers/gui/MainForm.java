@@ -20,7 +20,6 @@ public class MainForm {
     private JPanel dictionaryTabPanel;
     private JPanel outputPanel;
     private JTextArea outputTextArea;
-    private JCheckBox enableLoggingCheckbox;
     private JTextArea logTextArea;
     private JButton clearButton;
     private JButton saveToFileButton;
@@ -33,7 +32,7 @@ public class MainForm {
         translationModeBox.addItem("Greek > English");
         translationModeBox.addItem("English > Greek");
 
-        translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputLabel, logLabel, enableLoggingCheckBox));
+        translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputTextArea, logTextArea, enableLoggingCheckBox));
     }
 
     public static void main(String[] args) {

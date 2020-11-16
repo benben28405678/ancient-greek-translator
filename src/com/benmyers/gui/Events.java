@@ -4,16 +4,16 @@ import javax.swing.*;
 
 public class Events {
 
-    public static void translate(JTextArea inputTextArea, JLabel outputLabel) {
-        outputLabel.setText(inputTextArea.getText());
+    public static void translate(JTextArea inputTextArea, JTextArea outputTextArea) {
+        outputTextArea.setText(inputTextArea.getText());
     }
 
-    public static void translate(JTextArea inputTextArea, JLabel outputLabel, JLabel logLabel) {
-        if(outputLabel.getText() == "" || outputLabel.getText() == null) {
-            translate(inputTextArea, outputLabel);
+    public static void translate(JTextArea inputTextArea, JTextArea outputTextArea, JTextArea logTextArea) {
+        if(outputTextArea.getText() == "" || outputTextArea.getText() == null) {
+            translate(inputTextArea, outputTextArea);
         } else {
-            logLabel.setText(logLabel.getText() + "\n" + outputLabel.getText());
-            outputLabel.setText(inputTextArea.getText());
+            logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
+            outputTextArea.setText(inputTextArea.getText());
         }
 
     }
