@@ -2,27 +2,33 @@ package com.benmyers.gui;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
 
 public class MainForm {
-
-    private JLabel titleLabel;
-    private JButton clickMeButton;
     private JPanel mainPanel;
+    private JLabel titleLabel;
+    private JComboBox translationModeBox;
+    private JScrollPane liveOutputScrollPane;
+    private JPanel liveOutputPanel;
+    private JLabel outputLabel;
+    private JPanel inputPanel;
+    private JTextArea inputTextArea;
+    private JButton translateButton;
+    private JCheckBox autotranslateCheckBox;
+    private JScrollPane loggedOutputPanel;
+    private JButton clearLogButton;
+    private JButton saveToFileButton;
+    private JButton translateButton1;
+    private JScrollPane inputScrollPane;
 
     public MainForm() {
 
-        clickMeButton.addActionListener(new ActionListener() {
-
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                clickMeButton.setText("Yay!");
-            }
-        });
+        translationModeBox.addItem("Greek > English");
+        translationModeBox.addItem("English > Greek");
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("MainForm");
+
+        JFrame frame = new JFrame("Ancient Greek Translator");
         frame.setContentPane(new MainForm().mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
