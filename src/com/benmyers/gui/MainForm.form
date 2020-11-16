@@ -106,7 +106,9 @@
                       <component id="b52f6" class="javax.swing.JTextArea" binding="inputTextArea">
                         <constraints/>
                         <properties>
+                          <lineWrap value="true"/>
                           <text value="Ελλεκ"/>
+                          <wrapStyleWord value="true"/>
                         </properties>
                       </component>
                     </children>
@@ -141,7 +143,9 @@
                         <constraints/>
                         <properties>
                           <editable value="false"/>
+                          <lineWrap value="true"/>
                           <text value=""/>
+                          <wrapStyleWord value="true"/>
                         </properties>
                       </component>
                     </children>
@@ -202,7 +206,9 @@
                         <constraints/>
                         <properties>
                           <editable value="false"/>
+                          <lineWrap value="true"/>
                           <text value=""/>
+                          <wrapStyleWord value="true"/>
                         </properties>
                       </component>
                     </children>
