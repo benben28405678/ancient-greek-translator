@@ -9,15 +9,25 @@ public class Events {
     }
 
     public static void translate(JTextArea inputTextArea, JTextArea outputTextArea, JTextArea logTextArea) {
-        if(outputTextArea.getText() == "" || outputTextArea.getText() == null) {
+        if(outputTextArea.getText().equals("") || outputTextArea.getText() == null) {
             translate(inputTextArea, outputTextArea);
         } else {
-            logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
-            outputTextArea.setText(inputTextArea.getText());
+            if(logTextArea.getText().equals("")) {
+                logTextArea.setText(outputTextArea.getText());
+                outputTextArea.setText(inputTextArea.getText());
+            } else {
+                logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
+                outputTextArea.setText(inputTextArea.getText());
+            }
         }
-
     }
 
-    public static void translateAndLog() {
+    public static void translateAndLog(JTextArea inputTextArea, JTextArea outputTextArea, JTextArea logTextArea) {
+        outputTextArea.setText(inputTextArea.getText());
+        if(logTextArea.getText().equals("")) {
+            logTextArea.setText(outputTextArea.getText());
+        } else {
+            logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
+        }
     }
 }
