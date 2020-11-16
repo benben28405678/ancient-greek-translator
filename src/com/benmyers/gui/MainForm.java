@@ -22,6 +22,7 @@ public class MainForm {
     private JTabbedPane tabPane;
     private JPanel translatorTabPanel;
     private JPanel dictionaryTabPanel;
+    private JLabel logLabel;
 
     public MainForm() {
 

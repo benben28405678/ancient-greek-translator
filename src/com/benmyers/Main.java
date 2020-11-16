@@ -1,5 +1,6 @@
 package com.benmyers;
 
+import com.benmyers.gui.LookAndFeelManager;
 import com.benmyers.gui.MainForm;
 
 import javax.swing.*;
@@ -9,11 +10,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        try {
-            UIManager.setLookAndFeel("com.sun.java.swing.plaf.windows.WindowsLookAndFeel"); //Windows Look and feel
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | UnsupportedLookAndFeelException e) {
-            e.printStackTrace();
-        }
+        LookAndFeelManager.setLookAndFeel();
 
         MainForm.main(new String[0]);
     }
