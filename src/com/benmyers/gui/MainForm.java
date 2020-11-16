@@ -1,5 +1,9 @@
 package com.benmyers.gui;
 
+import com.benmyers.GreekDictionaryInterpreter;
+import com.benmyers.GreekTranslator;
+import com.benmyers.Translator;
+
 import javax.swing.*;
 import java.util.Arrays;
 
@@ -27,18 +31,18 @@ public class MainForm {
     private JLabel logLabel;
     private JCheckBox enableLoggingCheckBox;
 
-    public MainForm() {
+    public MainForm(GreekDictionaryInterpreter interpreter, Translator translator) {
 
         for (String s : Arrays.asList("Greek > English", "English > Greek")) translationModeBox.addItem(s);
 
-        translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputTextArea, logTextArea, enableLoggingCheckBox));
-        translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea));
+        translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputTextArea, logTextArea, enableLoggingCheckBox, translator));
+        translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea, translator));
     }
 
-    public static void main(String[] args) {
+    public static void main(GreekDictionaryInterpreter interpreter, Translator translator) {
 
         JFrame frame = new JFrame("Ancient Greek Translator");
-        frame.setContentPane(new MainForm().mainPanel);
+        frame.setContentPane(new MainForm(interpreter, translator).mainPanel);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
