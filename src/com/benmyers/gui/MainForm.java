@@ -1,7 +1,8 @@
 package com.benmyers.gui;
 
 import javax.swing.*;
-import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class MainForm {
     private JPanel mainPanel;
@@ -12,22 +13,25 @@ public class MainForm {
     private JLabel outputLabel;
     private JPanel inputPanel;
     private JTextArea inputTextArea;
-    private JButton translateButton;
+    private JButton translateAndLogButton;
     private JCheckBox autotranslateCheckBox;
     private JScrollPane loggedOutputPanel;
     private JButton clearLogButton;
     private JButton saveToFileButton;
-    private JButton translateButton1;
+    private JButton translateButton;
     private JScrollPane inputScrollPane;
     private JTabbedPane tabPane;
     private JPanel translatorTabPanel;
     private JPanel dictionaryTabPanel;
     private JLabel logLabel;
+    private JCheckBox enableLoggingCheckBox;
 
     public MainForm() {
 
         translationModeBox.addItem("Greek > English");
         translationModeBox.addItem("English > Greek");
+
+        translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputLabel, logLabel, enableLoggingCheckBox));
     }
 
     public static void main(String[] args) {
