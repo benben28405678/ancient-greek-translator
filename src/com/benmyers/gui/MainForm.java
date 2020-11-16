@@ -8,21 +8,23 @@ public class MainForm {
     private JPanel mainPanel;
     private JLabel titleLabel;
     private JComboBox translationModeBox;
-    private JScrollPane liveOutputScrollPane;
-    private JPanel liveOutputPanel;
     private JLabel outputLabel;
     private JPanel inputPanel;
     private JTextArea inputTextArea;
     private JButton translateAndLogButton;
     private JCheckBox autotranslateCheckBox;
-    private JScrollPane loggedOutputPanel;
-    private JButton clearLogButton;
-    private JButton saveToFileButton;
     private JButton translateButton;
     private JScrollPane inputScrollPane;
     private JTabbedPane tabPane;
     private JPanel translatorTabPanel;
     private JPanel dictionaryTabPanel;
+    private JPanel outputPanel;
+    private JTextArea outputTextArea;
+    private JCheckBox enableLoggingCheckbox;
+    private JTextArea logTextArea;
+    private JButton clearButton;
+    private JButton saveToFileButton;
+    private JPanel logPanel;
     private JLabel logLabel;
     private JCheckBox enableLoggingCheckBox;
 
