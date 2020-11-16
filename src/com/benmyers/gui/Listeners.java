@@ -20,4 +20,15 @@ public class Listeners {
             }
         };
     }
+
+    public static ActionListener translateAndLogButtonListener(JTextArea inputTextArea, JTextArea outputTextArea, JTextArea logTextArea) {
+        return new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                Events.translateAndLog(inputTextArea, outputTextArea, logTextArea);
+            }
+        };
+    }
 }

@@ -33,6 +33,7 @@ public class MainForm {
         translationModeBox.addItem("English > Greek");
 
         translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputTextArea, logTextArea, enableLoggingCheckBox));
+        translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea));
     }
 
     public static void main(String[] args) {
