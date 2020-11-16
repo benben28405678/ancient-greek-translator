@@ -1,11 +1,16 @@
 package com.benmyers;
 
-import java.util.Scanner;
-import java.util.ArrayList;
+import com.benmyers.gui.MainForm;
 
 public class Main {
 
-    private static String input;
+    public static void main(String[] args) {
+
+        MainForm.main(new String[0]);
+    }
+
+
+    /*private static String input;
     private static Language inputLanguage;
 
     private static GreekDictionaryInterpreter dictionaryInterpreter;
@@ -126,11 +131,7 @@ public class Main {
             if(repeatCommand.indexOf("e") == 0 || repeatCommand.indexOf("ε") == 0) System.exit(1);
 
             System.out.print("\033[H\033[2J");
-            System.out.flush();
-
-        }
-
-    }
+            System.out.flush();*/
 
     private static void print(String s) {
         System.out.print(s);
