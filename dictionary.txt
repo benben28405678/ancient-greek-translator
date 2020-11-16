@@ -306,3 +306,35 @@
 ναυτικός;2a - story/tale/word/speech
 οὐδέ - and not/not even
 τέχνη;1a - skill/art/expertise
+#
+# Section D --------------------------------------------------------------------------------
+βοα.ω - shout
+ετι - still/yet
+ζητε.ω - look for/seek
+θυρα;2b - door
+καθευδ.ω - sleep
+καλε.ω - call/summon
+καλευστης;1d - boatswain
+οικοι - at home
+τρεχ.ω - run
+τριηραρχος;2d - trierarch
+#
+# Section E --------------------------------------------------------------------------------
+δη - then/indeed
+εμβαιν.ω - embark
+ευχη;1a - prayer
+ευχ.ομαι - pray
+θυσια;1b - a sacrifice
+θυ.ω - sacrifice
+κελευ.ω - order
+σπενδ.ω - pour a libation
+σπονδη;1a - a libation
+#
+# Chapter 4
+# Section A --------------------------------------------------------------------------------
+γεωργος;2a - farmer
+γυνη;3a - woman/wife
+δαιμων;3a - god/daimon
+κρατεω - hold power over
+νη - by!
+ολιγ,ος - small/few
