@@ -19,6 +19,9 @@ public class MainForm {
     private JButton saveToFileButton;
     private JButton translateButton1;
     private JScrollPane inputScrollPane;
+    private JTabbedPane tabPane;
+    private JPanel translatorTabPanel;
+    private JPanel dictionaryTabPanel;
 
     public MainForm() {
 
