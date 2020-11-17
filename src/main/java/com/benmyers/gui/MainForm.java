@@ -36,7 +36,8 @@ public class MainForm {
 
         this.translator = translator;
 
-        for (String s : Arrays.asList("Greek > English", "English > Greek")) translationModeBox.addItem(s);
+        translationModeBox.addItem("Greek > English");
+        translationModeBox.addItem("English > Greek");
 
         translateButton.addActionListener(Listeners.translateButtonListener(inputTextArea, outputTextArea, logTextArea, enableLoggingCheckBox, translator));
         translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea, translator));
