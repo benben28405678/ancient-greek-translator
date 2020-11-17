@@ -16,6 +16,8 @@ public class Main {
 
     public static void main(String[] args) {
 
+        System.out.println("Ancient Greek Translator");
+
         dictionaryInterpreter = new GreekDictionaryInterpreter(new ArrayList<Flag>());
         translator = new GreekTranslator(dictionaryInterpreter.getDictionary(), new ArrayList<Flag>());
 

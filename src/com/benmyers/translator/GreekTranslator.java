@@ -20,6 +20,8 @@ public class GreekTranslator extends Translator {
         String[] words = input.split(" ");
         ArrayList<String> translatedWords = new ArrayList<String>();
 
+        System.out.println("?");
+
         for(String word: words) {
             if(word == " ") continue;
             String translatedWord = (String) dictionary.get(word);
@@ -35,7 +37,28 @@ public class GreekTranslator extends Translator {
                 }
 
             }
-            if(translatedWord == null) translatedWord = word + "*";
+
+            //if(translatedWord == null) translatedWord = word + "*";
+
+            System.out.println("-");
+            if(translatedWord == null) {
+
+                System.out.println("--");
+
+                String candidate = null;
+                int matchLen = word.length() - 1;
+
+                while(matchLen > 2) {
+                    candidate = (String) dictionary.get(word.substring(0, matchLen));
+                    System.out.println(candidate);
+                    if(candidate != null) break;
+                }
+
+                if(candidate == null) translatedWord = candidate + "?";
+                else translatedWord = word + "*";
+
+            }
+
             translatedWords.add(translatedWord);
         }
 
