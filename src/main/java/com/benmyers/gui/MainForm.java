@@ -4,8 +4,6 @@ import com.benmyers.GreekDictionaryInterpreter;
 import com.benmyers.translator.Translator;
 
 import javax.swing.*;
-import javax.swing.event.DocumentEvent;
-import javax.swing.event.DocumentListener;
 import java.util.Arrays;
 
 public class MainForm {

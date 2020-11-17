@@ -4,6 +4,7 @@ import com.benmyers.gui.LookAndFeelManager;
 import com.benmyers.gui.MainForm;
 import com.benmyers.translator.GreekTranslator;
 import com.benmyers.translator.Translator;
+import com.formdev.flatlaf.FlatDarculaLaf;
 
 import java.util.ArrayList;
 
@@ -19,7 +20,9 @@ public class Main {
         dictionaryInterpreter = new GreekDictionaryInterpreter(new ArrayList<Flag>());
         translator = new GreekTranslator(dictionaryInterpreter.getDictionary(), new ArrayList<Flag>());
 
-        LookAndFeelManager.setLookAndFeel();
+        FlatDarculaLaf.install();
+
+        //LookAndFeelManager.setLookAndFeel();
 
         MainForm.main(dictionaryInterpreter, translator);
     }
