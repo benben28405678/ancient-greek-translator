@@ -4,8 +4,10 @@ import com.benmyers.translator.Translator;
 
 import java.awt.event.ActionListener;
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
-public class Listeners {
+public class Listeners{
 
     public static ActionListener translateButtonListener(JTextArea inputTextArea, JTextArea outputTextArea, JTextArea logTextArea, JCheckBox enableLoggingCheckBox, Translator translator) {
         return e -> {
@@ -28,5 +30,26 @@ public class Listeners {
 
     public static ActionListener saveLogButtonListener(JTextArea logTextArea, JPanel parent) {
         return e -> Events.saveLog(logTextArea, parent);
+    }
+
+    public static DocumentListener inputTextUpdateListener(JTextArea inputTextArea, JTextArea outputTextArea, JCheckBox autotranslateCheckBox, Translator translator) {
+        return new DocumentListener() {
+            @Override
+            public void insertUpdate(DocumentEvent documentEvent) {
+                onUpdate();
+            }
+
+            @Override
+            public void removeUpdate(DocumentEvent documentEvent) {
+                onUpdate();
+            }
+
+            @Override
+            public void changedUpdate(DocumentEvent documentEvent) {}
+
+            private void onUpdate() {
+                if(autotranslateCheckBox.isSelected()) Events.translate(inputTextArea, outputTextArea, translator);
+            }
+        };
     }
 }

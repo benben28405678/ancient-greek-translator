@@ -16,7 +16,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        dictionaryInterpreter = new GreekDictionaryInterpreter(Language.GRK, new ArrayList<Flag>());
+        dictionaryInterpreter = new GreekDictionaryInterpreter(new ArrayList<Flag>());
         translator = new GreekTranslator(dictionaryInterpreter.getDictionary(), new ArrayList<Flag>());
 
         LookAndFeelManager.setLookAndFeel();

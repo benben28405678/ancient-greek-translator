@@ -4,6 +4,8 @@ import com.benmyers.GreekDictionaryInterpreter;
 import com.benmyers.translator.Translator;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.util.Arrays;
 
 public class MainForm {
@@ -30,7 +32,11 @@ public class MainForm {
     private JLabel logLabel;
     private JCheckBox enableLoggingCheckBox;
 
+    private Translator translator;
+
     public MainForm(GreekDictionaryInterpreter interpreter, Translator translator) {
+
+        this.translator = translator;
 
         for (String s : Arrays.asList("Greek > English", "English > Greek")) translationModeBox.addItem(s);
 
@@ -38,6 +44,8 @@ public class MainForm {
         translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea, translator));
         clearButton.addActionListener(Listeners.clearLogButtonListener(logTextArea, outputTextArea));
         saveToFileButton.addActionListener(Listeners.saveLogButtonListener(logTextArea, mainPanel));
+
+        inputTextArea.getDocument().addDocumentListener(Listeners.inputTextUpdateListener(inputTextArea, outputTextArea, autotranslateCheckBox, translator));
     }
 
     public static void main(GreekDictionaryInterpreter interpreter, Translator translator) {

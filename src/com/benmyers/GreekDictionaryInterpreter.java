@@ -7,7 +7,6 @@ import java.util.*;
 
 public class GreekDictionaryInterpreter {
 
-    private Language keyLanguage;
     private Dictionary dictionary = new Hashtable();
     private ArrayList<String> verbStems = new ArrayList<String>();
 
@@ -352,7 +351,7 @@ public class GreekDictionaryInterpreter {
                     }
                 }
 
-                dictionary.put(grk, eng); break;
+                dictionary.put(grk, eng);
 
 
                 /*if(nounStem != null) {
