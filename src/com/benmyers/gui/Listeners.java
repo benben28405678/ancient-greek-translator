@@ -1,6 +1,6 @@
 package com.benmyers.gui;
 
-import com.benmyers.Translator;
+import com.benmyers.translator.Translator;
 
 import java.awt.event.ActionListener;
 import javax.swing.*;

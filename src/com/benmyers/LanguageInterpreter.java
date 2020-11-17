@@ -1,6 +1,6 @@
 package com.benmyers;
 
-public class LanguageInterpreter {
+/*public class LanguageInterpreter {
 
     private static final char[] englishLetters = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
     private static final char[] greekLetters = {'α', 'β', 'γ', 'δ', 'ε', 'ζ', 'η', 'θ', 'ι', 'κ', 'λ', 'μ', 'ν', 'ξ', 'ο', 'ρ', 'σ', 'ς', 'τ', 'υ', 'φ', 'χ', 'ψ', 'ω'};
@@ -32,3 +32,4 @@ public class LanguageInterpreter {
     }
 
 }
+*/

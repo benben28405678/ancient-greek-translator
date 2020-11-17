@@ -11,7 +11,7 @@ public class GreekDictionaryInterpreter {
     private Dictionary dictionary = new Hashtable();
     private ArrayList<String> verbStems = new ArrayList<String>();
 
-    public GreekDictionaryInterpreter(Language input, ArrayList<Flag> flags) {
+    public GreekDictionaryInterpreter(ArrayList<Flag> flags) {
 
         try {
             File file = new File("dictionary.txt");
@@ -352,11 +352,7 @@ public class GreekDictionaryInterpreter {
                     }
                 }
 
-                switch(input) {
-                    case ENG: dictionary.put(eng, grk); break;
-                    case GRK: dictionary.put(grk, eng); break;
-                    default: break;
-                }
+                dictionary.put(grk, eng); break;
 
 
                 /*if(nounStem != null) {

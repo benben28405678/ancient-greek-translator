@@ -1,4 +1,6 @@
-package com.benmyers;
+package com.benmyers.translator;
+
+import com.benmyers.Flag;
 
 import java.util.Dictionary;
 import java.util.ArrayList;

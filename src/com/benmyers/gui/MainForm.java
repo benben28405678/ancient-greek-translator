@@ -1,8 +1,7 @@
 package com.benmyers.gui;
 
 import com.benmyers.GreekDictionaryInterpreter;
-import com.benmyers.GreekTranslator;
-import com.benmyers.Translator;
+import com.benmyers.translator.Translator;
 
 import javax.swing.*;
 import java.util.Arrays;

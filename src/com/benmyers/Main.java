@@ -2,6 +2,8 @@ package com.benmyers;
 
 import com.benmyers.gui.LookAndFeelManager;
 import com.benmyers.gui.MainForm;
+import com.benmyers.translator.GreekTranslator;
+import com.benmyers.translator.Translator;
 
 import java.util.ArrayList;
 
