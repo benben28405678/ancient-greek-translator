@@ -68,12 +68,47 @@
 ῡμῶν - you all (gen)
 ῡμῖν - you all (dat)
 #
-#
 # Negatives --------------------------------------------------------------------------------
 οὐ - not
 οὐκ - not
 οὐχ - not
 μἠ - don't
+#
+# This/That --------------------------------------------------------------------------------
+ουτος - this (nom m s)
+αυτη - this (nom f s)
+τουτο - this (nom/acc n s)
+τουτον - this (acc m s)
+ταυτην - this (acc f s)
+τουτου - this (gen m/n s)
+ταυτης - this (gen f s)
+τουτω - this (dat m/n s)
+ταυτη - this (dat f s)
+ουτοι - these (nom m pl)
+αυται - these (nom f pl)
+ταυτα - these (nom/acc n pl)
+τουτους - these (acc m pl)
+ταυτας - these (acc f pl)
+τουτων - these (gen m/n pl)
+τουτοις - these (gen f pl)
+ταυταις - these (dat pl)
+εκεινος - that (nom m s)
+εκεινη - that (nom f s)
+εκεινο - that (nom/acc n s)
+εκεινον - that (acc m s)
+εκεινην - that (acc f s)
+εκεινου - that (gen m/n s)
+εκεινης - that (gen f s)
+εκεινω - that (dat m/n s)
+εκεινη - that (dat f s)
+εκεινοι - those (nom m pl)
+εκειναι - those (nom f pl)
+εκεινα - those (nom/acc n pl)
+εκεινους - those (acc m pl)
+εκεινας - those (acc f pl)
+εκεινων - those (gen m/n pl)
+εκεινοις - those (gen f pl)
+εκειναις - those (dat pl)
 #
 # Chapter 1
 #
@@ -338,3 +373,20 @@
 κρατεω - hold power over
 νη - by!
 ολιγ,ος - small/few
+#
+# Section B --------------------------------------------------------------------------------
+ατιμαζ.ω - dishonor
+δεσπστης;1d - master
+διαφθειρ.ω - destroy/kill
+θεος;2a - god/goddess
+θνητ,ος - mortal
+λωλυ.ω - prevent/stop
+μαλιστα - especially/particularly
+νεκρος;2a - corpse
+νομος;2a - law/convention
+νοσος;2a - plague/disease
+πυρα;1b - funeral pyre
+τιμα.ω - honor
+τυπτ.ω - strike/hit
+φερ.ω - carry/bear
+φυβος;2a - fear
