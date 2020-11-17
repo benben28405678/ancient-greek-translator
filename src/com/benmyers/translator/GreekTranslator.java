@@ -3,6 +3,8 @@ package com.benmyers.translator;
 import com.benmyers.Flag;
 import com.benmyers.translator.Translator;
 
+import java.util.Collection;
+import java.util.Collections;
 import java.util.Dictionary;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
@@ -148,7 +150,39 @@ public class GreekTranslator extends Translator {
                 }
 
             }
+
+            if(translatedWord == null) {
+
+                String candidate = null;
+                int matchLen = word.length() - 1;
+
+                while(matchLen > 1) {
+
+                    for(Object key: Collections.list(dictionary.keys())) {
+                        String keyString = key.toString();
+
+                        if(matchLen >= keyString.length()) continue;
+                        if(keyString.substring(0, matchLen).equals(word.substring(0, matchLen))) {
+                            candidate = (String) dictionary.get(key);
+                        }
+
+                        System.out.println(key);
+
+                    }
+
+                    //candidate = (String) dictionary.get(word.substring(0, matchLen));
+                    System.out.println(candidate);
+                    if(candidate != null) break;
+                    matchLen -= 1;
+                }
+
+                if(candidate != null) translatedWord = candidate + "?";
+                else translatedWord = word + "*";
+
+            }
+
             if(translatedWord == null) translatedWord = word + "*";
+
             translatedWords.add(translatedWord);
         }
 
