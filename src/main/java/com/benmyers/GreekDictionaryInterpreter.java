@@ -2,7 +2,7 @@ package com.benmyers;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.FileNotFoundException;
+import java.io.InputStream;
 import java.util.*;
 
 public class GreekDictionaryInterpreter {
@@ -13,8 +13,8 @@ public class GreekDictionaryInterpreter {
     public GreekDictionaryInterpreter(ArrayList<Flag> flags) {
 
         try {
-            File file = new File("dictionary.txt");
-            Scanner sc = new Scanner(file);
+            InputStream input = getClass().getResourceAsStream("/dictionary.txt");
+            Scanner sc = new Scanner(input);
             while(sc.hasNextLine()) {
                 String data = sc.nextLine();
                 if(data.charAt(0) == '#') continue;
@@ -372,8 +372,7 @@ public class GreekDictionaryInterpreter {
                 System.out.println(((String)f).indexOf("ος"));
                 System.out.println(dictionary.get(f));
             }*/
-        } catch(FileNotFoundException e) {
-            System.out.println("An error occurred.");
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
