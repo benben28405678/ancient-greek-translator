@@ -26,7 +26,7 @@ public class Events extends Component {
             if(logTextArea.getText().equals("")) {
                 logTextArea.setText(outputTextArea.getText());
             } else {
-                logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
+                logTextArea.setText(logTextArea.getText() + "\n\n" + outputTextArea.getText());
             }
             translate(inputTextArea, outputTextArea, translator);
         }
@@ -37,7 +37,7 @@ public class Events extends Component {
         if(logTextArea.getText().equals("")) {
             logTextArea.setText(outputTextArea.getText());
         } else {
-            logTextArea.setText(logTextArea.getText() + "\n" + outputTextArea.getText());
+            logTextArea.setText(logTextArea.getText() + "\n\n" + outputTextArea.getText());
         }
     }
 
