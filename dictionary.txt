@@ -77,41 +77,69 @@
 # This/That --------------------------------------------------------------------------------
 ουτος - this (nom m s)
 αυτη - this (nom f s)
-τουτο - this (nom/acc n s)
+τουτο - this (nom+acc n s)
 τουτον - this (acc m s)
 ταυτην - this (acc f s)
-τουτου - this (gen m/n s)
+τουτου - this (gen m+n s)
 ταυτης - this (gen f s)
-τουτω - this (dat m/n s)
+τουτω - this (dat m+n s)
 ταυτη - this (dat f s)
 ουτοι - these (nom m pl)
 αυται - these (nom f pl)
-ταυτα - these (nom/acc n pl)
+ταυτα - these (nom+acc n pl)
 τουτους - these (acc m pl)
 ταυτας - these (acc f pl)
-τουτων - these (gen m/n pl)
+τουτων - these (gen m+n pl)
 τουτοις - these (gen f pl)
 ταυταις - these (dat pl)
 εκεινος - that (nom m s)
 εκεινη - that (nom f s)
-εκεινο - that (nom/acc n s)
+εκεινο - that (nom+acc n s)
 εκεινον - that (acc m s)
 εκεινην - that (acc f s)
-εκεινου - that (gen m/n s)
+εκεινου - that (gen m+n s)
 εκεινης - that (gen f s)
-εκεινω - that (dat m/n s)
+εκεινω - that (dat m+n s)
 εκεινη - that (dat f s)
 εκεινοι - those (nom m pl)
 εκειναι - those (nom f pl)
-εκεινα - those (nom/acc n pl)
+εκεινα - those (nom+acc n pl)
 εκεινους - those (acc m pl)
 εκεινας - those (acc f pl)
-εκεινων - those (gen m/n pl)
+εκεινων - those (gen m+n pl)
 εκεινοις - those (gen f pl)
 εκειναις - those (dat pl)
 #
-# Chapter 1
+# A certain, Some --------------------------------------------------------------------------------
+τις - a certain/some (nom m+f s)
+τινα - a certain/some (acc m+f s AND nom+acc n pl)
+τινος - a certain/some (gen s)
+τινι - a certain/some (dat s)
+τι - a certain/some (nom+acc n s)
+τινες - a certain/some (nom m+f pl)
+τινας - a certain/some (acc m+f pl)
+τινων - a certain/some (gen pl)
+τισι - a certain/some (dat pl)
+τισιν - a certain/some (dat pl)
 #
+# Nothing --------------------------------------------------------------------------------
+ουδεις - no one (nom m)
+ουδενα - no one (acc m+f)
+ουδενος - no one/nothing (gen m+n)
+ουδενι - no one/nothing (dat m+n)
+ουδεμια - no one (nom f)
+ουδεμιαν - no one (acc f)
+ουδεμιας - no one (gen f)
+ουδεν - nothing (nom+acc n)
+ουδενι - nothing (dat n)
+#
+#
+# Irregular Participles --------------------------------------------------------------------------------
+ων;3a - being
+ουσα;1a - being
+ον;3b - being
+#
+# Chapter 1
 # Section A, B --------------------------------------------------------------------------------
 ἀκρόπολις;3e - acropolis
 ἆρα - ?
