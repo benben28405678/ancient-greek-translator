@@ -180,7 +180,7 @@
 γε - at least/at any rate
 διὰ τί - why?
 δύ.ω - sink
-εἰς - tp/into/onto
+εἰς - to/into/onto
 ἐκ - out of
 ἐζ - out of
 ἐλθ.έ - come!/go!
@@ -366,26 +366,32 @@
 σπονδη;1a - a libation
 #
 # Chapter 4
-# Section A --------------------------------------------------------------------------------
+# Section A, B --------------------------------------------------------------------------------
+αστιυ;3f - city of Athens
+ατιμαζ.ω - dishonor
 γεωργος;2a - farmer
 γυνη;3a - woman/wife
-δαιμων;3a - god/daimon
-κρατεω - hold power over
-νη - by!
-ολιγ,ος - small/few
-#
-# Section B --------------------------------------------------------------------------------
-ατιμαζ.ω - dishonor
 δεσπστης;1d - master
+δαιμων;3a - god/daimon
 διαφθειρ.ω - destroy/kill
+ευφρ,ων - well disposed
 θεος;2a - god/goddess
 θνητ,ος - mortal
-λωλυ.ω - prevent/stop
+κακοδαιμ,ων - unlucky
+κρατε.ω - hold sway/power over
+κωλυ.ω - prevent/stop
 μαλιστα - especially/particularly
 νεκρος;2a - corpse
+νη - by!
 νομος;2a - law/convention
 νοσος;2a - plague/disease
+ολιγ,ος - small/few
+πληθος;3c - crowd/the people
+πολις;3e - city
+πραγμα;3b - thing/matte/affair/troubles
 πυρα;1b - funeral pyre
+σκευη;3c - furniture/gear
+ταζις;3e - battle-array/order/rank
 τιμα.ω - honor
 τυπτ.ω - strike/hit
 φερ.ω - carry/bear
