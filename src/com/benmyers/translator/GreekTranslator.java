@@ -144,7 +144,7 @@ public class GreekTranslator extends Translator {
                 Matcher m = p.matcher(translatedWord);
 
                 if(m.find() && chunks.length > 1) {
-                    translatedWord = chunks[0] + " "+ m.group(0);
+                    translatedWord = chunks[0] + " " + m.group(0);
                 } else {
                     translatedWord = chunks[0];
                 }
@@ -165,9 +165,6 @@ public class GreekTranslator extends Translator {
                         if(keyString.substring(0, matchLen).equals(word.substring(0, matchLen))) {
                             candidate = (String) dictionary.get(key);
                         }
-
-                        System.out.println(key);
-
                     }
 
                     if(candidate != null) break;
@@ -195,6 +192,9 @@ public class GreekTranslator extends Translator {
             } else if(inputWord.length() < outputWord.length()) {
                 alignedOutput += outputWord;
                 while(inputWord.length() < outputWord.length()) inputWord += " ";
+                alignedInput += inputWord;
+            } else {
+                alignedOutput += outputWord;
                 alignedInput += inputWord;
             }
 
