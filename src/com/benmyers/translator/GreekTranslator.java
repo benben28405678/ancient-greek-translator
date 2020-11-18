@@ -170,8 +170,6 @@ public class GreekTranslator extends Translator {
 
                     }
 
-                    //candidate = (String) dictionary.get(word.substring(0, matchLen));
-                    System.out.println(candidate);
                     if(candidate != null) break;
                     matchLen -= 1;
                 }
