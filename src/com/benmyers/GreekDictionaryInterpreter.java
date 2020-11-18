@@ -1,10 +1,9 @@
 package com.benmyers;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.FileNotFoundException;
+import java.io.*;
+import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 import java.util.*;
-
 public class GreekDictionaryInterpreter {
 
     private Dictionary dictionary = new Hashtable();
@@ -13,10 +12,14 @@ public class GreekDictionaryInterpreter {
     public GreekDictionaryInterpreter(ArrayList<Flag> flags) {
 
         try {
-            File file = new File("dictionary.txt");
-            Scanner sc = new Scanner(file);
-            while(sc.hasNextLine()) {
-                String data = sc.nextLine();
+            InputStream bytes = Main.class.getClassLoader().getResourceAsStream("dictionary.txt");
+            Reader chars = new InputStreamReader(bytes, StandardCharsets.UTF_8);
+            BufferedReader lines = new BufferedReader(chars);
+            while(true) {
+                String data = lines.readLine();
+
+                if (data == null) break;
+
                 if(data.charAt(0) == '#') continue;
                 String[] keywords = data.split(" - ");
 
@@ -446,31 +449,15 @@ public class GreekDictionaryInterpreter {
                     }
                 }
 
+                System.out.println(grk + ": " +eng);
+
                 dictionary.put(grk, eng);
-
-
-                /*if(nounStem != null) {
-                    if(!flags.contains(Flag.USING_ACCENTS)) nounStem = AccentRemover.removeAccents(nounStem);
-
-                    // 2A
-
-
-                    // 2B
-
-                }*/
-
             }
-            sc.close();
-            /*for (Enumeration e = dictionary.keys(); e.hasMoreElements();) {
-                Object f = e.nextElement();
-                System.out.println(f);
-                System.out.println(((String)f).indexOf("ος"));
-                System.out.println(dictionary.get(f));
-            }*/
-        } catch(FileNotFoundException e) {
-            System.out.println("An error occurred.");
+        } catch (Exception e) {
             e.printStackTrace();
         }
+
+
 
     }
 

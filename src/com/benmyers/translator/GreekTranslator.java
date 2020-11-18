@@ -206,6 +206,8 @@ public class GreekTranslator extends Translator {
 
         String[] toReturn = {alignedInput, alignedOutput};
 
+        System.out.println(toReturn[1]);
+
         return toReturn;
     }
 }
