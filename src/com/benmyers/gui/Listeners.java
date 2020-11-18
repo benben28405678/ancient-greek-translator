@@ -32,6 +32,10 @@ public class Listeners{
         return e -> Events.saveLog(logTextArea, parent);
     }
 
+    public static ActionListener lockCheckButtonListener(JCheckBox lockCheckBox, JTextArea outputTextArea) {
+        return e -> Events.toggleOutputLock(lockCheckBox, outputTextArea);
+    }
+
     public static DocumentListener inputTextUpdateListener(JTextArea inputTextArea, JTextArea outputTextArea, JCheckBox autotranslateCheckBox, Translator translator) {
         return new DocumentListener() {
             @Override

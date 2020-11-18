@@ -76,4 +76,8 @@ public class Events extends Component {
             }
         }
     }
+
+    public static void toggleOutputLock(JCheckBox checkBox, JTextArea textArea) {
+        textArea.setEditable(!checkBox.isSelected());
+    }
 }

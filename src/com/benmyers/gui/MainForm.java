@@ -31,6 +31,7 @@ public class MainForm {
     private JPanel logPanel;
     private JLabel logLabel;
     private JCheckBox enableLoggingCheckBox;
+    private JCheckBox lockCheckBox;
 
     private Translator translator;
 
@@ -44,6 +45,7 @@ public class MainForm {
         translateAndLogButton.addActionListener(Listeners.translateAndLogButtonListener(inputTextArea, outputTextArea, logTextArea, translator));
         clearButton.addActionListener(Listeners.clearLogButtonListener(logTextArea, outputTextArea));
         saveToFileButton.addActionListener(Listeners.saveLogButtonListener(logTextArea, mainPanel));
+        lockCheckBox.addActionListener(Listeners.lockCheckButtonListener(lockCheckBox, outputTextArea));
 
         inputTextArea.getDocument().addDocumentListener(Listeners.inputTextUpdateListener(inputTextArea, outputTextArea, autotranslateCheckBox, translator));
     }
