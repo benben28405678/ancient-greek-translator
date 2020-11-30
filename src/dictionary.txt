@@ -447,3 +447,37 @@
 τυπτ.ω - strike/hit
 φερ.ω - carry/bear
 φυβος;2a - fear
+#
+# Section C, D --------------------------------------------------------------------------------
+ανομια;1b - lawlesness
+απαγ.ω - take away/lead
+αποκτειν.ω - kill
+αποφευγ.ω - escape/run off
+ασεβεια;1b - irreverence to the gods
+αυτον - him (m)
+αυτην - her (f)
+αυτο - it (n)
+αφελκ.ω - drag off
+βασιλευς;3g - king
+βωμος;2a - altar
+δουλος;2a - slave
+επικαλε.ομαι - call upon
+ιερον;2b - sanctuary
+ικετης;1b - suppliant
+κηρυζ;3a - herald
+λανθαν.ω - escape notice of
+μα - by...!
+μισε.ω - hate
+ζενος;2a - foreigner/guest/host
+ολοφυρ.ομαι - lament/mourn for
+ορθ,ος - correct/right/straight
+πασχ.ω - suffer/experience/undergo
+πρεσβευτης;1d - ambassador
+τρεσβεις;3e - ambassadors
+τρεπ.ομαι - turn
+τυγχαν.ω - happen to be
+υβρις;3e - agression/violence
+υπηρετης;1d - servant/slave
+φαιν.ομαι - seem to be/appear to be
+φθαν.ω - anticipate
+ω - what...!
