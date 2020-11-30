@@ -171,42 +171,64 @@ public class GreekTranslator extends Translator {
                     matchLen -= 1;
                 }
 
-                if(candidate != null) translatedWord = candidate + "?";
+                if(candidate != null) translatedWord = candidate + "*";
                 else translatedWord = word + "*";
 
             }
 
-            if(translatedWord == null) translatedWord = word + "*";
+            if(translatedWord == null) translatedWord = word + " [NF]";
 
             translatedWords.add(translatedWord);
         }
 
-        String alignedInput = "", alignedOutput = "";
+        String alignedInput = "", alignedOutput = "", alignedMeta = "";
+
+        Matcher m;
+        Pattern p = Pattern.compile("\\(([^\\)]+)\\)");
 
         for(int i = 0; i < translatedWords.size() && i < words.length; i++) {
-            String inputWord = words[i], outputWord = translatedWords.get(i);
-            if(inputWord.length() > outputWord.length()) {
+
+            m = p.matcher(translatedWords.get(i));
+
+            String inputWord = words[i], outputWord = translatedWords.get(i), meta = "";
+
+            if(m.find()) meta = m.group(0);
+            outputWord = outputWord.replace(meta, "");
+
+            if(inputWord.length() > outputWord.length() && inputWord.length() > meta.length()) {
                 alignedInput += inputWord;
                 while(outputWord.length() < inputWord.length()) outputWord += " ";
+                while(meta.length() < inputWord.length()) meta += " ";
                 alignedOutput += outputWord;
-            } else if(inputWord.length() < outputWord.length()) {
+                alignedMeta += meta;
+            }
+            else if(outputWord.length() > inputWord.length() && outputWord.length() > meta.length()) {
                 alignedOutput += outputWord;
                 while(inputWord.length() < outputWord.length()) inputWord += " ";
+                while(meta.length() < outputWord.length()) meta += " ";
                 alignedInput += inputWord;
-            } else {
+                alignedMeta += meta;
+            }
+            else if(meta.length() > inputWord.length() && meta.length() > outputWord.length()) {
+                alignedMeta += meta;
+                while(inputWord.length() < meta.length()) inputWord += " ";
+                while(outputWord.length() < meta.length()) outputWord += " ";
+                alignedInput += inputWord;
                 alignedOutput += outputWord;
+            } else {
                 alignedInput += inputWord;
+                alignedOutput += outputWord;
+                alignedMeta += meta;
             }
 
-            alignedInput += " "; alignedOutput += " ";
+            alignedInput += " "; alignedOutput += " "; alignedMeta += " ";
         }
 
         alignedInput = alignedInput.substring(0, alignedInput.length() - 1);
         alignedOutput = alignedOutput.substring(0, alignedOutput.length() - 1);
+        alignedMeta = alignedMeta.substring(0, alignedMeta.length() - 1);
 
-        String[] toReturn = {alignedInput, alignedOutput};
-
-        System.out.println(toReturn[1]);
+        String[] toReturn = {alignedInput, alignedOutput, alignedMeta};
 
         return toReturn;
     }

@@ -449,8 +449,6 @@ public class GreekDictionaryInterpreter {
                     }
                 }
 
-                System.out.println(grk + ": " +eng);
-
                 dictionary.put(grk, eng);
             }
         } catch (Exception e) {

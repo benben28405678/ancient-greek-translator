@@ -16,7 +16,7 @@ public class Events extends Component {
         String input = inputTextArea.getText();
         String[] output = translator.alignAndTranslate(input);
 
-        outputTextArea.setText(output[0] + "\n" + output[1]);
+        outputTextArea.setText(output[0] + "\n" + output[1] + "\n" + output[2]);
     }
 
     public static void translate(JTextArea inputTextArea, JTextArea outputTextArea, JTextArea logTextArea, Translator translator) {
