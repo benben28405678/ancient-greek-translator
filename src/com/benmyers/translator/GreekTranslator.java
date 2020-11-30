@@ -195,31 +195,32 @@ public class GreekTranslator extends Translator {
             if(m.find()) meta = m.group(0);
             outputWord = outputWord.replace(meta, "");
 
-            if(inputWord.length() > outputWord.length() && inputWord.length() > meta.length()) {
-                alignedInput += inputWord;
+            if(inputWord.length() > outputWord.length()) {
                 while(outputWord.length() < inputWord.length()) outputWord += " ";
+            }
+            if(inputWord.length() > meta.length()) {
                 while(meta.length() < inputWord.length()) meta += " ";
-                alignedOutput += outputWord;
-                alignedMeta += meta;
             }
-            else if(outputWord.length() > inputWord.length() && outputWord.length() > meta.length()) {
-                alignedOutput += outputWord;
+
+            if(outputWord.length() > inputWord.length()) {
                 while(inputWord.length() < outputWord.length()) inputWord += " ";
+            }
+            if(outputWord.length() > meta.length()) {
                 while(meta.length() < outputWord.length()) meta += " ";
-                alignedInput += inputWord;
-                alignedMeta += meta;
             }
-            else if(meta.length() > inputWord.length() && meta.length() > outputWord.length()) {
-                alignedMeta += meta;
-                while(inputWord.length() < meta.length()) inputWord += " ";
+
+            if(meta.length() > outputWord.length()) {
                 while(outputWord.length() < meta.length()) outputWord += " ";
-                alignedInput += inputWord;
-                alignedOutput += outputWord;
-            } else {
-                alignedInput += inputWord;
-                alignedOutput += outputWord;
-                alignedMeta += meta;
             }
+            if(meta.length() > inputWord.length()) {
+                while(inputWord.length() < meta.length()) inputWord += " ";
+            }
+
+            alignedInput += inputWord;
+            alignedOutput += outputWord;
+            alignedMeta += meta;
+
+            //if(meta == "") meta = " ";
 
             alignedInput += " "; alignedOutput += " "; alignedMeta += " ";
         }

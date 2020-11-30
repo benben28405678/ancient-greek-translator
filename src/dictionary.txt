@@ -162,6 +162,15 @@
 πσυομρνη;1a - stopping oneself
 παυομενον;2a - stopping oneself
 #
+# I was --------------------------------------------------------------------------------
+η - I was
+ησθα - you were
+ην - he was/she was/it was
+ημεν - we were
+ητε - you all were
+ηστε - you all were
+ησαν - they were
+#
 # Chapter 1
 # Section A, B --------------------------------------------------------------------------------
 ακροπολις;3e - acropolis
