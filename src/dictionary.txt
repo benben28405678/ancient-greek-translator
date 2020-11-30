@@ -11,68 +11,68 @@
 # Grammar
 #
 # Definite Articles --------------------------------------------------------------------------------
-ὁ - the (nom m s)
-ἡ - the (nom f s)
-τό - the (nom n s)
-τόν - the (acc m s)
-τήν - the (acc f s)
-τό - the (acc n s)
-τοῦ - the (gen m s)
-τῆς - the (gen f s)
-τοῦ - the (gen n s)
-τῶ - the (dat m+n s)
-τῆ - the (dat f s)
-οἱ - the (nom m pl)
-αἱ - the (nom f pl)
-τά - the (nom+acc n pl)
-τούς - the (acc m pl)
-τᾱς - the (acc f pl)
-τῶν - the (gen pl)
-τοῖς - the (dat m+n pl)
-ταῖς - the (dat f pl)
+ο - the (nom m s)
+η - the (nom f s)
+το - the (nom n s)
+τον - the (acc m s)
+την - the (acc f s)
+το - the (acc n s)
+του - the (gen m s)
+της - the (gen f s)
+του - the (gen n s)
+τω - the (dat m+n s)
+τη - the (dat f s)
+οι - the (nom m pl)
+αι - the (nom f pl)
+τα - the (nom+acc n pl)
+τους - the (acc m pl)
+τας - the (acc f pl)
+των - the (gen pl)
+τοις - the (dat m+n pl)
+ταις - the (dat f pl)
 #
 # Irregular Verbs --------------------------------------------------------------------------------
-εἰμί - I am
-εἶ - you are
-ἐστί - he is/she is/it is
-ἐστίν - he is/she is/it is
-ἐσμέν - we are
-ἐστέ - you all are
-εἰσί - they are
-εἰσίν - they are
-οἶδα - I know
-οἶσθα - you know
-οἶδε - he knows/she knows/it knows
-ἴσμεν - we know
-ἴστε - you all know
-ἴσασι - they know
-ἴσασιν - they know
+ειμι - I am
+ει - you are
+εστι - he is/she is/it is
+εστιν - he is/she is/it is
+εσμεν - we are
+εστε - you all are
+εισι - they are
+εισιν - they are
+οιδα - I know
+οισθα - you know
+οιδε - he knows/she knows/it knows
+ισμεν - we know
+ιστε - you all know
+ισασι - they know
+ισασιν - they know
 #
 # Personal Pronouns --------------------------------------------------------------------------------
 με - I (acc)
-ἐμέ - I (acc)
+εμε - I (acc)
 μου - I (gen)
-ἐμοῦ - I (gen)
+εμου - I (gen)
 μοι - I (dat)
-ἐμοί - I (dat)
-σύ - you (nom)
-σέ - you (acc)
-σοῦ - you (gen)
-σοί - you (dat)
-ἠμεῖς - we (nom)
-ἠμᾶς - we (acc)
-ἠμῶν - we (gen)
-ἠμῖν - we (dat)
-ῡμεῖς - you all (nom)
-ῡμᾶς - you all (acc)
-ῡμῶν - you all (gen)
-ῡμῖν - you all (dat)
+εμοι - I (dat)
+συ - you (nom)
+σε - you (acc)
+σου - you (gen)
+σοι - you (dat)
+ημεις - we (nom)
+ημας - we (acc)
+ημων - we (gen)
+ημιν - we (dat)
+υμεις - you all (nom)
+υμας - you all (acc)
+υμων - you all (gen)
+υμιν - you all (dat)
 #
 # Negatives --------------------------------------------------------------------------------
-οὐ - not
-οὐκ - not
-οὐχ - not
-μἠ - don't
+ου - not
+ουκ - not
+ουχ - not
+μη - don't
 #
 # This/That --------------------------------------------------------------------------------
 ουτος - this (nom m s)
@@ -122,6 +122,19 @@
 τισι - a certain/some (dat pl)
 τισιν - a certain/some (dat pl)
 #
+# Which, who, what? --------------------------------------------------------------------------------
+τις - which?/who?/what? (nom m+f s)
+τινα - which?/who?/what? (acc m+f s)
+τινος - which?/who?/what? (gen s)
+τινι - which?/who?/what? (dat s)
+τι - which?/who?/what? (nom+acc n s)
+τινες - which?/who?/what? (nom m+f pl)
+τινας - which?/who?/what? (acc m+f pl)
+τινων - which?/who?/what? (gen pl)
+τισι - which?/who?/what? (gen pl)
+τισιν - which?/who?/what? (dat pl)
+τινα - which?/who?/what? (nom+acc n pl)
+#
 # Nothing --------------------------------------------------------------------------------
 ουδεις - no one (nom m)
 ουδενα - no one (acc m+f)
@@ -133,208 +146,218 @@
 ουδεν - nothing (nom+acc n)
 ουδενι - nothing (dat n)
 #
-#
-# Irregular Participles --------------------------------------------------------------------------------
+# Present Participles --------------------------------------------------------------------------------
 ων;3a - being
 ουσα;1a - being
 ον;3b - being
 #
+# Present Active Participles --------------------------------------------------------------------------------
+παυων;3a - stopping
+παυουσ;1a - stopping
+παυον;3a - stopping
+ποιων;3a - doing
+ποιουσα;1a - doing
+ποιουν;3a - doing
+παυομενος;2a - stopping oneself
+πσυομρνη;1a - stopping oneself
+παυομενον;2a - stopping oneself
+#
 # Chapter 1
 # Section A, B --------------------------------------------------------------------------------
-ἀκρόπολις;3e - acropolis
-ἆρα - ?
-βαίν.ω - come/go/walk
-γῆ;1a - land
-δέ - and/but
-δεῦρο - over here
-ἐγώ - I
-ἔπειτα - then/next
+ακροπολις;3e - acropolis
+αρα - ?
+βαιν.ω - come/go/walk
+γη;1a - land
+δε - and/but
+δευρο - over here
+εγω - I
+επειτα - then/next
 και - and/also
-καλο,ός - beautiful/fine/good
-ναύτης;1d - sailor
-νεώριον - dockyard
-Παρθενών;3a - Parthenon
-πλοῖον;2b - vessel/ship
-ῥαψωδός;2a - rhapsode
-σύ - you (s)
+καλο,ος - beautiful/fine/good
+ναυτης;1d - sailor
+νεωριον - dockyard
+Παρθενων;3a - Parthenon
+πλοιον;2b - vessel/ship
+ραψωδος;2a - rhapsode
+συ - you (s)
 τε - both
-τίς - what?/who?
-ὦ - O
+τις - what?/who?
+ω - O
 #
 # Section C, D --------------------------------------------------------------------------------
-ἀκού.ω - hear/listen
-ἀληυῆ - the truth
-ἀληΘῆ - the truth
-ἀλλά - but/alternatively
-βλέπ.ω - look at
-γάρ - for/because
-διώκ.ω - chase/pursue
-ἔγωγε - I at least/at any rate
-εἰσβαίν.ω - enter/board
-ἡμεῖς - we
-καταβαίν.ω - go/come down
-μέν.ω - remain/wait for
-μή - don't!
-οὐδέν - nothing
-οὖν - so/then/really/therefore
-τί - what?
-ὑμεῖς - you (pl)
-φεύγ.ω - flee/run away/run off
-ὡς - how!
+ακου.ω - hear/listen
+αληυη - the truth
+αληΘη - the truth
+αλλα - but/alternatively
+βλεπ.ω - look at
+γαρ - for/because
+διωκ.ω - chase/pursue
+εγωγε - I at least/at any rate
+εισβαιν.ω - enter/board
+ημεις - we
+καταβαιν.ω - go/come down
+μεν.ω - remain/wait for
+μη - don't!
+ουδεν - nothing
+ουν - so/then/really/therefore
+τι - what?
+υμεις - you (pl)
+φευγ.ω - flee/run away/run off
+ως - how!
 #
 # Section E, F --------------------------------------------------------------------------------
-ἀκρῑβ,ος - accurate/close
-βαθέ,ος - deep
-βοηθέ.ω - help/run to help
-δηλό.ω - show/reveal
+ακριβ,ος - accurate/close
+βαθε,ος - deep
+βοηθε.ω - help/run to help
+δηλο.ω - show/reveal
 κακ,ος - bad/evil
 καλ,ος - fine/beautiful
-μέν - one one hand
-δέ - but
-οἴμοι - alas!/oh dear!
-ὁρά.ω - see
-ποῖ - to where?
-ποιέ.ω - make/do
-ποῦ - where?
+μεν - one one hand
+δε - but
+οιμοι - alas!/oh dear!
+ορα.ω - see
+ποι - to where?
+ποιε.ω - make/do
+που - where?
 σαφ,ος - clear
-σεαυτόν - yourself (s)
+σεαυτον - yourself (s)
 #
 # Section G --------------------------------------------------------------------------------
-αναβαίν.ω - go up
-ἄνθρωπος;2a - man/fellow
-ἀπό - away from
-ἀποθνήσκ.ω - die
-ἀποχωρέω - go away/depart
+αναβαιν.ω - go up
+ανθρωπος;2a - man/fellow
+απο - away from
+αποθνησκ.ω - die
+αποχωρεω - go away/depart
 γε - at least/at any rate
-διὰ τί - why?
-δύ.ω - sink
-εἰς - to/into/onto
-ἐκ - out of
-ἐζ - out of
-ἐλθ.έ - come!/go!
-ἐμπόριον;2b - marketplace
-ἔργον;2b - task/work/job/duty
-ἔχ.ω - have/hold
-ἡμέτερ,ος - our (s)
-θάλαττα;1c - sea
-κακός - bad/evil/cowardly/lowly/mean
-κυβερνήτης;1d - captain/helmsman
-λέγ.ω - say
-λέμβος;2a - boat/lifeboat
-νῦν - now
-πλέ.ω - sail
-πρός - towards
-ῥίπτ.ω - throw/hurl
-σώζ.ω - save/keep safe
-σῶος - safe
-σωτηρίᾱ;1b - safety/salvation
-φίλος;2a - friend
-φροντίζω - think/worry
+δια τι - why?
+δυ.ω - sink
+εις - to/into/onto
+εκ - out of
+εζ - out of
+ελθ.ε - come!/go!
+εμποριον;2b - marketplace
+εργον;2b - task/work/job/duty
+εχ.ω - have/hold
+ημετερ,ος - our (s)
+θαλαττα;1c - sea
+κακος - bad/evil/cowardly/lowly/mean
+κυβερνητης;1d - captain/helmsman
+λεγ.ω - say
+λεμβος;2a - boat/lifeboat
+νυν - now
+πλε.ω - sail
+προς - towards
+ριπτ.ω - throw/hurl
+σωζ.ω - save/keep safe
+σωος - safe
+σωτηρια;1b - safety/salvation
+φιλος;2a - friend
+φροντιζω - think/worry
 #
 # Section H, I, J --------------------------------------------------------------------------------
-ᾱεί - always
-ἄριστ,ος - best/very good
-γιγνώσκ.ω - know/think/resolve
-δῆλ,ος - clear/obvious
+αει - always
+αριστ,ος - best/very good
+γιγνωσκ.ω - know/think/resolve
+δηλ,ος - clear/obvious
 Ελλην - Greek
-ἔμπειρ,ος - skilled/experienced
-ἤ - or
-μῶρ,ος - stupid/foolish
-ναί - yes
-ναῦς - ship
-οῖδα - know
-ὅτι - that
-παίζ.ω - play/joke
-περί - about
-πολλά - many things
-πῶς γὰρ οὔ - of course
-στρατηγός;2a - general
-ναυτικά - naval matters
-στρατηγικά - leadership/generalship
-στρατιωτικά - military matters
+εμπειρ,ος - skilled/experienced
+η - or
+μωρ,ος - stupid/foolish
+ναι - yes
+ναυς - ship
+οιδα - know
+οτι - that
+παιζ.ω - play/joke
+περι - about
+πολλα - many things
+πως γαρ ου - of course
+στρατηγος;2a - general
+ναυτικα - naval matters
+στρατηγικα - leadership/generalship
+στρατιωτικα - military matters
 #
 # Chapter 2
 # Section A, B, C, D --------------------------------------------------------------------------------
-ἀγαθ,ός - good/noble/courageous
-Αθηναῖος;2a - Athenian
-ἅμα - at the same time
-ἀναχωρέ.ω - retreat
-ἀπορέ.ω - be at a loss/have no resources
-ἀπορίᾱ;1b - perplexity/lack of provisions
-αὖθις - again
-βάρβαρος;2a - barbarian/foreigner
-βέβαι,ος - secure
-βοή;1a - shout
-βραδέως - slowly
-διά - because of
-διέρχ.ομαι - go through/relate
-δουλό.ομαι - enslave
-ἐλευθερία;1b - freedom
-ἐλευθερος - free
-ἐλευθερό.ω - set free
-ἐμ,ός - my/mine
-ἐπειδή - when
-ἐπἐρχ.ομαι - go against/attack
-ἐπί - at/against/to attack
-ἔρχ.ομαι - go/come
-ἡδέως - with pleasure/happily
-ἤδη - by now/now/already
-ἡσυχάζ.ω - be quiet/keep quiet
-ἡσυχία;1b - peace/quiet
-θεᾱ;1b - goddess
-θεᾱ.ομαι - observe/watch
-κάλλιστ,ος - good/beautiful/very fine/most
-λόγος;2a - story/tale
-μάχ.ομαι - fight
-ναυμαχίᾱ;1b - naval battle
-νῑκά.ω - win/defeat
-νῑκη;1a - victory/conquest
-ὁμόνοια;1b - agreement/harmony
-ὅσ,ος - how great!
-οὐκέτι - no longer
-οὕτω - thus/so
-οὕτως - thus/so
-παρά - along/alongside
-πῑπτ.ω - fall/die
-πολέμιοι;2a - the enemy
-πολέμι,ος - hostile/enemy
-πόλεμος;2a - war
-πότερον - whether
-προσέρχ.ομαι - advance/go towards
-σιωπά.ω - be silent
-σκοπέ.ω - look at/consider
-στρατιᾱ;1b - army
-ταχέως - quickly
-τέλος - in the end/finally
+αγαθ,ος - good/noble/courageous
+Αθηναιος;2a - Athenian
+αμα - at the same time
+αναχωρε.ω - retreat
+απορε.ω - be at a loss/have no resources
+απορια;1b - perplexity/lack of provisions
+αυθις - again
+βαρβαρος;2a - barbarian/foreigner
+βεβαι,ος - secure
+βοη;1a - shout
+βραδεως - slowly
+δια - because of
+διερχ.ομαι - go through/relate
+δουλο.ομαι - enslave
+ελευθερια;1b - freedom
+ελευθερος - free
+ελευθερο.ω - set free
+εμ,ος - my/mine
+επειδη - when
+επερχ.ομαι - go against/attack
+επι - at/against/to attack
+ερχ.ομαι - go/come
+ηδεως - with pleasure/happily
+ηδη - by now/now/already
+ησυχαζ.ω - be quiet/keep quiet
+ησυχια;1b - peace/quiet
+θεα;1b - goddess
+θεα.ομαι - observe/watch
+καλλιστ,ος - good/beautiful/very fine/most
+λογος;2a - story/tale
+μαχ.ομαι - fight
+ναυμαχια;1b - naval battle
+νικα.ω - win/defeat
+νικη;1a - victory/conquest
+ομονοια;1b - agreement/harmony
+οσ,ος - how great!
+ουκετι - no longer
+ουτω - thus/so
+ουτως - thus/so
+παρα - along/alongside
+πιπτ.ω - fall/die
+πολεμιος;2a - the enemy
+πολεμι,ος - hostile/enemy
+πολεμος;2a - war
+ποτερον - whether
+προσερχ.ομαι - advance/go towards
+σιωπα.ω - be silent
+σκοπε.ω - look at/consider
+στρατια;1b - army
+ταχεως - quickly
+τελος - in the end/finally
 τι - a/something
-τόλμα;1c - daring
-τολμάω - dare/be daring/undertake
-φοβέ.ομαι - fear/be afraid of
-ψευδῶς - falsely
-ὥσπερ - like/as
+τολμα;1c - daring
+τολμαω - dare/be daring/undertake
+φοβε.ομαι - fear/be afraid of
+ψευδως - falsely
+ωσπερ - like/as
 #
 # Chapter 3
 # Section A --------------------------------------------------------------------------------
-ἄγε - come!
-ἀφικωέ.ομαι - arrive/come
-ἐρωτά.ω - ask
-ἰδού - look!/here!/hey!
-κίνδῡνος;2a - danger
-ωῆσος;2a - island
-πόθεν - from where?
-πυρά;2b - fire signal
-σπεύδ.ω - hurry
-χωρέ.ω - go/come
-ανήρ - man (3a nom s)
-γείτων - neighbour (3a nom s)
-λαμπάς - torch (3a nom s)
-λιμήν - harbour (3a nom s)
-νύζ - night (3a nom s)
-παῖς - child/slave (3a nom s)
-πατρίς - fatherland (3a nom s)
-σωτήρ - saviour (3a nom s)
-γείτων - neighbour
-ἀνδρ;3a - man
+αγε - come!
+αφικωε.ομαι - arrive/come
+ερωτα.ω - ask
+ιδου - look!/here!/hey!
+κινδυνος;2a - danger
+ωησος;2a - island
+ποθεν - from where?
+πυρα;2b - fire signal
+σπευδ.ω - hurry
+χωρε.ω - go/come
+ανηρ - man (3a nom s)
+γειτων - neighbour (3a nom s)
+λαμπας - torch (3a nom s)
+λιμην - harbour (3a nom s)
+νυζ - night (3a nom s)
+παις - child/slave (3a nom s)
+πατρις - fatherland (3a nom s)
+σωτηρ - saviour (3a nom s)
+γειτων - neighbour
+ανδρ;3a - man
 γειτον;3a - neighbour
 λαμπαδ;3a - torch
 λιμεν;3a - harbour
@@ -344,31 +367,31 @@
 σωτηρ;3a - saviour
 #
 # Section B --------------------------------------------------------------------------------
-δεινός - terrible/dire/clever
-εὖ - well
-ἠμεῖς - we
-θεᾱ.ομαι - watch/gaze at
-θόρυβος;2a - noise/din/hustle and bustle
-οἰκίᾱ;1b - house
-οἴλαδε - homewards
-ὄπλα;2b - weapons
-πορεύομαι - march/journey
-σύ - you (s)
-ῡμεῖς - you (pl)
-φαίν.ομαι - appear/seem
+δεινος - terrible/dire/clever
+ευ - well
+ημεις - we
+θεα.ομαι - watch/gaze at
+θορυβος;2a - noise/din/hustle and bustle
+οικια;1b - house
+οιλαδε - homewards
+οπλα;2b - weapons
+πορευομαι - march/journey
+συ - you (s)
+υμεις - you (pl)
+φαιν.ομαι - appear/seem
 #
 # Section C --------------------------------------------------------------------------------
-ἀλλήλους;2a - each other/one another
-ἄλλος - other/the rest of
-ἐγγύς - near/nearby
-εἰπέ - speak!/tell me!
-ἐπειδή - when/since/because
-κατά - in/on/by/according to
-Λακεδαιμόνιος;2a - Spartan
-λαμβάν.ω - take/capture
-ναυτικός;2a - story/tale/word/speech
-οὐδέ - and not/not even
-τέχνη;1a - skill/art/expertise
+αλληλους;2a - each other/one another
+αλλος - other/the rest of
+εγγυς - near/nearby
+ειπε - speak!/tell me!
+επειδη - when/since/because
+κατα - in/on/by/according to
+Λακεδαιμονιος;2a - Spartan
+λαμβαν.ω - take/capture
+ναυτικος;2a - story/tale/word/speech
+ουδε - and not/not even
+τεχνη;1a - skill/art/expertise
 #
 # Section D --------------------------------------------------------------------------------
 βοα.ω - shout
