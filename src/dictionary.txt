@@ -152,15 +152,12 @@
 ον;3b - being
 #
 # Present Active Participles --------------------------------------------------------------------------------
-παυων;3a - stopping
-παυουσ;1a - stopping
-παυον;3a - stopping
-ποιων;3a - doing
-ποιουσα;1a - doing
-ποιουν;3a - doing
-παυομενος;2a - stopping oneself
-πσυομρνη;1a - stopping oneself
-παυομενον;2a - stopping oneself
+#ποιων;3a - doing
+#ποιουσα;1a - doing
+#ποιουν;3a - doing
+#παυομενος;2a - stopping oneself
+#πσυομρνη;1a - stopping oneself
+#παυομενον;2a - stopping oneself
 #
 # I was --------------------------------------------------------------------------------
 η - I was

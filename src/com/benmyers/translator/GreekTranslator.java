@@ -171,8 +171,13 @@ public class GreekTranslator extends Translator {
                     matchLen -= 1;
                 }
 
-                if(candidate != null) translatedWord = candidate + "*";
-                else translatedWord = word + "*";
+                int guessStrength = word.length() - matchLen - 1;
+                if(candidate != null) {
+                    if(guessStrength > 3) translatedWord = candidate + "*⚠" + (word.length() - matchLen);
+                    else if(guessStrength == 0) translatedWord = candidate + "*";
+                    else translatedWord = candidate + "*" + (word.length() - matchLen);
+                }
+                else translatedWord = word + "✘";
 
             }
 
