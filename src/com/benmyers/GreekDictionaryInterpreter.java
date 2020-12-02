@@ -71,15 +71,13 @@ public class GreekDictionaryInterpreter {
 
                         imperfectStem = imperfectStem.substring(0, imperfectStem.length() - 1);
 
-                        System.out.println(imperfectStem);
-
                         // Imperfect Indicative Active Contract
                         dictionary.put(imperfectStem + "ων", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "ας", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "α", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ωμεν", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "ατε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "ων", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "ας", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "α", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ωμεν", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ατε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ων", "they were " + eng + "-ing (3pl)");
                     }
                     // ε contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ε")) {
@@ -96,11 +94,11 @@ public class GreekDictionaryInterpreter {
 
                         // Imperfect Indicative Active Contract
                         dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "εις", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "ει", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ουμεν", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "ειτε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "εις", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ει", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεν", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ειτε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουν", "they were " + eng + "-ing (3pl)");
                     }
                     // ο contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ο")) {
@@ -118,11 +116,11 @@ public class GreekDictionaryInterpreter {
 
                         // Imperfect Indicative Active Contract
                         dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "ους", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ουμεν", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "ουτε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "ους", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ου", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεν", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ουτε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουν", "they were " + eng + "-ing (3pl)");
                     }
                     // Uncontracted
                     else {
@@ -137,12 +135,12 @@ public class GreekDictionaryInterpreter {
 
                         // Imperfect Indicative Active
                         dictionary.put(imperfectStem + "ον", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "ες", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "ε", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "εν", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ομεν", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "ετε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "ον", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "ες", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ε", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "εν", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ομεν", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ετε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ον", "they were " + eng + "-ing (3pl)");
                     }
 
                     // Present Active Participle
@@ -217,11 +215,11 @@ public class GreekDictionaryInterpreter {
 
                         // Imperfect Indicative Middle Contract
                         dictionary.put(imperfectStem + "ωμην", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "ω", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "ατο", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ωμεθα", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "ασθε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "ωντο", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "ω", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ατο", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ωμεθα", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ασθε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ωντο", "they were" + eng + "-ing (3pl)");
                     }
                     // ε contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ε")) {
@@ -239,11 +237,11 @@ public class GreekDictionaryInterpreter {
 
                         // Imperfect Indicative Middle Contract
                         dictionary.put(imperfectStem + "ουμην", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "ειτο", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ουμεθα", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "εισθε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "ουντο", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "ου", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ειτο", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεθα", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "εισθε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουντο", "they were " + eng + "-ing (3pl)");
                     }
                     // ο contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ο")) {
@@ -261,11 +259,11 @@ public class GreekDictionaryInterpreter {
 
                         // Imperfect Indicative Middle Contract
                         dictionary.put(imperfectStem + "ουμην", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "ουτο", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ουμεθα", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "ουσθε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "ουντο", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "ου", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ουτο", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεθα", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ουσθε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουντο", "they were " + eng + "-ing (3pl)");
                     }
                     // Uncontracted
                     else {
@@ -280,11 +278,11 @@ public class GreekDictionaryInterpreter {
 
                         // Imperfect Indicative Middle
                         dictionary.put(imperfectStem + "ομην", "I was " + eng + "-ing (1s)");
-                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (2s)");
-                        dictionary.put(imperfectStem + "ετο", "I was " + eng + "-ing (3s)");
-                        dictionary.put(imperfectStem + "ομεθα", "I was " + eng + "-ing (1pl)");
-                        dictionary.put(imperfectStem + "εσθε", "I was " + eng + "-ing (2pl)");
-                        dictionary.put(imperfectStem + "οντο", "I was " + eng + "-ing (3pl)");
+                        dictionary.put(imperfectStem + "ου", "you were " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ετο", "he/she/it was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ομεθα", "we were " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "εσθε", "you all were " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "οντο", "they were " + eng + "-ing (3pl)");
                     }
 
                     String participleStem = stem.substring(0, stem.length()) + "ομεν";
