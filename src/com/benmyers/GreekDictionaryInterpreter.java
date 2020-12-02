@@ -32,7 +32,32 @@ public class GreekDictionaryInterpreter {
 
                 // Active Verbs
                 if(grk.indexOf(".ω") >= 0) {
+
                     String stem = grk.replaceAll("\\..", "");
+
+                    String participleStem = stem.substring(0, stem.length());
+                    String imperfectStem = participleStem;
+
+                    if(imperfectStem.charAt(0) == 'α' || imperfectStem.charAt(0) == 'ε' || imperfectStem.charAt(0) == 'ο') {
+                        imperfectStem = imperfectStem.substring(1);
+                        imperfectStem = "η" + imperfectStem;
+                    }
+                    else if(imperfectStem.substring(0, 2) == "αι" || imperfectStem.substring(0, 2) == "ει") {
+                        imperfectStem = imperfectStem.substring(2);
+                        imperfectStem = "η" + imperfectStem;
+                    }
+                    else if(imperfectStem.charAt(0) == 'ο' || imperfectStem.charAt(0) == 'ω') {
+                        imperfectStem = imperfectStem.substring(1);
+                        imperfectStem = "ω" + imperfectStem;
+                    }
+                    else if(imperfectStem.substring(0, 2) == "αυ" || imperfectStem.substring(0, 2) == "ευ") {
+                        imperfectStem = imperfectStem.substring(2);
+                        imperfectStem = "ηυ" + imperfectStem;
+                    }
+                    else {
+                        imperfectStem = "ε" + imperfectStem;
+                    }
+
                     // α contract
                     if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("α")) {
                         stem = stem.substring(0, stem.length() - 1);
@@ -43,6 +68,18 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "ωμεν", eng + " (1pl)");
                         dictionary.put(stem + "ατε", eng + " (2pl+imp pl)");
                         dictionary.put(stem + "ωσι", eng + " (3pl)");
+
+                        imperfectStem = imperfectStem.substring(0, imperfectStem.length() - 1);
+
+                        System.out.println(imperfectStem);
+
+                        // Imperfect Indicative Active Contract
+                        dictionary.put(imperfectStem + "ων", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "ας", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "α", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ωμεν", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ατε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ων", "I was " + eng + "-ing (3pl)");
                     }
                     // ε contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ε")) {
@@ -54,6 +91,16 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "ουμεν", eng + " (1pl)");
                         dictionary.put(stem + "ειτε", eng + " (2pl+imp pl)");
                         dictionary.put(stem + "ουσι", eng + " (3pl)");
+
+                        imperfectStem = imperfectStem.substring(0, imperfectStem.length() - 1);
+
+                        // Imperfect Indicative Active Contract
+                        dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "εις", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ει", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεν", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ειτε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (3pl)");
                     }
                     // ο contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ο")) {
@@ -66,6 +113,16 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "ουτε", eng + " (2pl+imp pl)");
                         dictionary.put(stem + "ουσι", eng + " (3pl)");
                         dictionary.put(stem + "ου", eng + " (imp s)");
+
+                        imperfectStem = imperfectStem.substring(0, imperfectStem.length() - 1);
+
+                        // Imperfect Indicative Active Contract
+                        dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "ους", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεν", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ουτε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουν", "I was " + eng + "-ing (3pl)");
                     }
                     // Uncontracted
                     else {
@@ -77,11 +134,18 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "ουοι", eng + " (3pl)");
                         dictionary.put(stem + "ουοιν", eng + " (3pl)");
                         dictionary.put(stem + "ε", eng + " (imp s)");
-                    }
-                    
-                    String participleStem = stem.substring(0, stem.length());
 
-                    //Present Active Participle
+                        // Imperfect Indicative Active
+                        dictionary.put(imperfectStem + "ον", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "ες", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ε", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "εν", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ομεν", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ετε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ον", "I was " + eng + "-ing (3pl)");
+                    }
+
+                    // Present Active Participle
                     dictionary.put(participleStem + "ων", eng + "-ing (nom m s)");
                     dictionary.put(participleStem + "οντα", eng + "-ing (acc m s)");
                     dictionary.put(participleStem + "οντος", eng + "-ing (gen m s)");
@@ -106,75 +170,102 @@ public class GreekDictionaryInterpreter {
                     dictionary.put(participleStem + "οντων", eng + "-ing (gen n pl)");
                     dictionary.put(participleStem + "ουσι", eng + "-ing (dat n pl)");
                     dictionary.put(participleStem + "ουσιν", eng + "-ing (dat n pl)");
-                    
+
                     continue;
                 }
 
                 // Middle Verbs
                 if(grk.indexOf(".ομαι") >= 0) {
+
                     String stem = grk.replaceAll("\\.....", "");
+
+                    String imperfectStem = stem;
+
+                    if(imperfectStem.charAt(0) == 'α' || imperfectStem.charAt(0) == 'ε' || imperfectStem.charAt(0) == 'ο') {
+                        imperfectStem = imperfectStem.substring(1);
+                        imperfectStem = "η" + imperfectStem;
+                    }
+                    else if(imperfectStem.substring(0, 2) == "αι" || imperfectStem.substring(0, 2) == "ει") {
+                        imperfectStem = imperfectStem.substring(2);
+                        imperfectStem = "η" + imperfectStem;
+                    }
+                    else if(imperfectStem.charAt(0) == 'ο' || imperfectStem.charAt(0) == 'ω') {
+                        imperfectStem = imperfectStem.substring(1);
+                        imperfectStem = "ω" + imperfectStem;
+                    }
+                    else if(imperfectStem.substring(0, 2) == "αυ" || imperfectStem.substring(0, 2) == "ευ") {
+                        imperfectStem = imperfectStem.substring(2);
+                        imperfectStem = "ηυ" + imperfectStem;
+                    }
+                    else {
+                        imperfectStem = "ε" + imperfectStem;
+                    }
+
                     // α contract
                     if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("α")) {
                         stem = stem.substring(0, stem.length() - 1);
-                        if(flags.contains(Flag.USING_ACCENTS)) {
-                            dictionary.put(stem + "ῶμαι", eng + " (1s)");
-                            dictionary.put(stem + "ᾶ", eng + " (2s)");
-                            dictionary.put(stem + "ᾶται", eng + " (3s)");
-                            dictionary.put(stem + "ῶμεθα", eng + " (1pl)");
-                            dictionary.put(stem + "ᾶσθε", eng + " (2pl+imp pl)");
-                            dictionary.put(stem + "ῶνται", eng + " (3pl)");
-                            dictionary.put(stem + "ῶ", eng + " (imp s)");
-                        } else {
-                            dictionary.put(stem + "ωμαι", eng + " (1s)");
-                            dictionary.put(stem + "α", eng + " (2s)");
-                            dictionary.put(stem + "αται", eng + " (3s)");
-                            dictionary.put(stem + "ωμεθα", eng + " (1pl)");
-                            dictionary.put(stem + "ασθε", eng + " (2pl+imp pl)");
-                            dictionary.put(stem + "ωνται", eng + " (3pl)");
-                            dictionary.put(stem + "ω", eng + " (imp s)");
-                        }
+
+                        dictionary.put(stem + "ωμαι", eng + " (1s)");
+                        dictionary.put(stem + "α", eng + " (2s)");
+                        dictionary.put(stem + "αται", eng + " (3s)");
+                        dictionary.put(stem + "ωμεθα", eng + " (1pl)");
+                        dictionary.put(stem + "ασθε", eng + " (2pl+imp pl)");
+                        dictionary.put(stem + "ωνται", eng + " (3pl)");
+                        dictionary.put(stem + "ω", eng + " (imp s)");
+
+                        imperfectStem = imperfectStem.substring(0, imperfectStem.length() - 1);
+
+                        // Imperfect Indicative Middle Contract
+                        dictionary.put(imperfectStem + "ωμην", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "ω", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ατο", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ωμεθα", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ασθε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ωντο", "I was " + eng + "-ing (3pl)");
                     }
                     // ε contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ε")) {
                         stem = stem.substring(0, stem.length() - 1);
-                        if(flags.contains(Flag.USING_ACCENTS)) {
-                            dictionary.put(stem + "οῦμαι", eng + " (1s)");
-                            dictionary.put(stem + "ῆ", eng + " (2s)");
-                            dictionary.put(stem + "εῖται", eng + " (3s)");
-                            dictionary.put(stem + "ούμεθα", eng + " (1pl)");
-                            dictionary.put(stem + "εῖσθε", eng + " (2pl+imp pl)");
-                            dictionary.put(stem + "οῦνται", eng + " (3pl)");
-                            dictionary.put(stem + "οῦ", eng + " (imp s)");
-                        } else {
-                            dictionary.put(stem + "ουμαι", eng + " (1s)");
-                            dictionary.put(stem + "η", eng + " (2s)");
-                            dictionary.put(stem + "ειται", eng + " (3s)");
-                            dictionary.put(stem + "ουμεθα", eng + " (1pl)");
-                            dictionary.put(stem + "εισθε", eng + " (2pl+imp pl)");
-                            dictionary.put(stem + "ουνται", eng + " (3pl)");
-                            dictionary.put(stem + "ου", eng + " (imp s)");
-                        }
+
+                        dictionary.put(stem + "ουμαι", eng + " (1s)");
+                        dictionary.put(stem + "η", eng + " (2s)");
+                        dictionary.put(stem + "ειται", eng + " (3s)");
+                        dictionary.put(stem + "ουμεθα", eng + " (1pl)");
+                        dictionary.put(stem + "εισθε", eng + " (2pl+imp pl)");
+                        dictionary.put(stem + "ουνται", eng + " (3pl)");
+                        dictionary.put(stem + "ου", eng + " (imp s)");
+
+                        imperfectStem = imperfectStem.substring(0, imperfectStem.length() - 1);
+
+                        // Imperfect Indicative Middle Contract
+                        dictionary.put(imperfectStem + "ουμην", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ειτο", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεθα", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "εισθε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουντο", "I was " + eng + "-ing (3pl)");
                     }
                     // ο contract
                     else if(AccentRemover.removeAccents(stem.substring(stem.length() - 1)).equals("ο")) {
                         stem = stem.substring(0, stem.length() - 1);
-                        if(flags.contains(Flag.USING_ACCENTS)) {
-                            dictionary.put(stem + "οῦμαι", eng + " (1s)");
-                            dictionary.put(stem + "οῖ", eng + " (2s)");
-                            dictionary.put(stem + "οῦται", eng + " (3s)");
-                            dictionary.put(stem + "ούμεθα", eng + " (1pl)");
-                            dictionary.put(stem + "οῦσθε", eng + " (2pl+imp pl)");
-                            dictionary.put(stem + "οῦνται", eng + " (3pl)");
-                            dictionary.put(stem + "οῦ", eng + " (imp s)");
-                        } else {
-                            dictionary.put(stem + "ουμαι", eng + " (1s)");
-                            dictionary.put(stem + "οι", eng + " (2s)");
-                            dictionary.put(stem + "ουται", eng + " (3s)");
-                            dictionary.put(stem + "ουμεθα", eng + " (1pl)");
-                            dictionary.put(stem + "ουσθε", eng + " (2pl+imp pl)");
-                            dictionary.put(stem + "οθνται", eng + " (3pl)");
-                            dictionary.put(stem + "ου", eng + " (imp s)");
-                        }
+
+                        dictionary.put(stem + "ουμαι", eng + " (1s)");
+                        dictionary.put(stem + "οι", eng + " (2s)");
+                        dictionary.put(stem + "ουται", eng + " (3s)");
+                        dictionary.put(stem + "ουμεθα", eng + " (1pl)");
+                        dictionary.put(stem + "ουσθε", eng + " (2pl+imp pl)");
+                        dictionary.put(stem + "οθνται", eng + " (3pl)");
+                        dictionary.put(stem + "ου", eng + " (imp s)");
+
+                        imperfectStem = imperfectStem.substring(0, imperfectStem.length() - 1);
+
+                        // Imperfect Indicative Middle Contract
+                        dictionary.put(imperfectStem + "ουμην", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ουτο", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ουμεθα", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "ουσθε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "ουντο", "I was " + eng + "-ing (3pl)");
                     }
                     // Uncontracted
                     else {
@@ -186,6 +277,14 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(stem + "εσθε", eng + " (2pl+imp pl)");
                         dictionary.put(stem + "ονται", eng + " (3pl)");
                         dictionary.put(stem + "ου", eng + " (imp s)");
+
+                        // Imperfect Indicative Middle
+                        dictionary.put(imperfectStem + "ομην", "I was " + eng + "-ing (1s)");
+                        dictionary.put(imperfectStem + "ου", "I was " + eng + "-ing (2s)");
+                        dictionary.put(imperfectStem + "ετο", "I was " + eng + "-ing (3s)");
+                        dictionary.put(imperfectStem + "ομεθα", "I was " + eng + "-ing (1pl)");
+                        dictionary.put(imperfectStem + "εσθε", "I was " + eng + "-ing (2pl)");
+                        dictionary.put(imperfectStem + "οντο", "I was " + eng + "-ing (3pl)");
                     }
 
                     String participleStem = stem.substring(0, stem.length()) + "ομεν";
@@ -486,6 +585,13 @@ public class GreekDictionaryInterpreter {
 
 
 
+    }
+
+    private void addVerbToDictionary(String word, String translation) {
+        dictionary.put(word, translation);
+
+        // Imperfect Tense
+        dictionary.put("ε" + word, translation);
     }
 
     public int createDictionary() {

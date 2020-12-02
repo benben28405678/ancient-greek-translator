@@ -18,8 +18,11 @@ public class Main {
 
         System.out.println("Ancient Greek Translator");
 
+        ArrayList<Flag> flags = new ArrayList<Flag>();
+        flags.add(Flag.ALTERNATIVE_ENGLISH);
+
         dictionaryInterpreter = new GreekDictionaryInterpreter(new ArrayList<Flag>());
-        translator = new GreekTranslator(dictionaryInterpreter.getDictionary(), new ArrayList<Flag>());
+        translator = new GreekTranslator(dictionaryInterpreter.getDictionary(), flags);
 
         LookAndFeelManager.setLookAndFeel();
 
