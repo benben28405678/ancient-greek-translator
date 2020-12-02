@@ -1,5 +1,6 @@
 package com.benmyers.gui;
 
+import com.benmyers.Main;
 import com.benmyers.translator.Translator;
 
 import javax.swing.*;
@@ -79,5 +80,10 @@ public class Events extends Component {
 
     public static void toggleOutputLock(JCheckBox checkBox, JTextArea textArea) {
         textArea.setEditable(!checkBox.isSelected());
+    }
+
+    public static void changeMode(JComboBox modeComboBox) {
+        if(modeComboBox.getSelectedIndex() == 0) Main.modeGrkToEng();
+        else Main.modeEngToGrk();
     }
 }

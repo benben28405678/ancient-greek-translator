@@ -1,4 +1,8 @@
-package com.benmyers;
+package com.benmyers.interpreter;
+
+import com.benmyers.AccentRemover;
+import com.benmyers.Flag;
+import com.benmyers.Main;
 
 import java.io.*;
 import java.nio.charset.Charset;

@@ -36,6 +36,10 @@ public class Listeners{
         return e -> Events.toggleOutputLock(lockCheckBox, outputTextArea);
     }
 
+    public static ActionListener translationModeDropdownListener(JComboBox modeComboBox) {
+        return e -> Events.changeMode(modeComboBox);
+    }
+
     public static DocumentListener inputTextUpdateListener(JTextArea inputTextArea, JTextArea outputTextArea, JCheckBox autotranslateCheckBox, Translator translator) {
         return new DocumentListener() {
             @Override
