@@ -523,3 +523,29 @@
 χρεα;3c - debts
 χρηματα;3b - money
 χρηστ,ος - good/fine/serviceable
+#
+# Section C --------------------------------------------------------------------------------
+αιτια;1b - reason/course/responsibility
+διανοε.ομαι - plan/intend
+διανοια;1b - intention/plan
+νους;2a - mind/sense
+ουδεποτε - never
+Ποσειδων - Posideon
+πως - somehow
+πιλεω - love/kiss
+#
+# Section D --------------------------------------------------------------------------------
+αδικ,ος - unjust
+αυριον - tomorrow
+γε - at least
+δεχ.ομαι - receive
+διδασκ.ω - teach
+δικαι,ος - just
+εισερχ.ομαι - enter
+ενδον - inside
+κοπτ.ω - knock on/cut
+λογος;2a - argument/word/speech
+μαθητης;1d - student
+ουτε - neither/nor
+πειθ.ω - persuade
+σοφ,ος - wise/clever
