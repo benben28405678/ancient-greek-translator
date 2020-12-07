@@ -124,6 +124,7 @@ public class GreekDictionaryInterpreter {
                     }
                     // Uncontracted
                     else {
+
                         dictionary.put(stem + "ω", eng + " (1s)");
                         dictionary.put(stem + "εις", eng + " (2s)");
                         dictionary.put(stem + "ει", eng + " (3s)");
@@ -141,6 +142,15 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(imperfectStem + "ομεν", "we were " + eng + "-ing (1pl)");
                         dictionary.put(imperfectStem + "ετε", "you all were " + eng + "-ing (2pl)");
                         dictionary.put(imperfectStem + "ον", "they were " + eng + "-ing (3pl)");
+
+                        // Future Indicative Active
+                        dictionary.put(stem + "σ" + "ω", "I shall " + eng + " (1s)");
+                        dictionary.put(stem + "σ" + "εις", "You will " + eng + " (2s)");
+                        dictionary.put(stem + "σ" + "ει", "He/she/it will " + eng + " (3s)");
+                        dictionary.put(stem + "σ" + "ομεν", "We shall " + eng + " (1pl)");
+                        dictionary.put(stem + "σ" + "ετε", "You all will " + eng + " (2pl+imp pl)");
+                        dictionary.put(stem + "σ" + "ουοι", "They will " + eng + " (3pl)");
+                        dictionary.put(stem + "σ" + "ουοιν", "They will " + eng + " (3pl)");
                     }
 
                     // Present Active Participle
@@ -283,6 +293,15 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(imperfectStem + "ομεθα", "we were " + eng + "-ing (1pl)");
                         dictionary.put(imperfectStem + "εσθε", "you all were " + eng + "-ing (2pl)");
                         dictionary.put(imperfectStem + "οντο", "they were " + eng + "-ing (3pl)");
+
+                        // Future Indicative Active
+                        dictionary.put(stem + "σ" + "ομαι", "I shall " + eng + " (1s)");
+                        dictionary.put(stem + "σ" + "η", "You will " + eng + " (2s)");
+                        dictionary.put(stem + "σ" + "εται", "He/she/it will " + eng + " (3s)");
+                        dictionary.put(stem + "σ" + "ομεθα", "We shall " + eng + " (1pl)");
+                        dictionary.put(stem + "σ" + "εσθε", "You all will " + eng + " (2pl+imp pl)");
+                        dictionary.put(stem + "σ" + "ονται", "They will " + eng + " (3pl)");
+                        dictionary.put(stem + "σ" + "ου", "They will " + eng + " (3pl)");
                     }
 
                     String participleStem = stem.substring(0, stem.length()) + "ομεν";
@@ -583,13 +602,6 @@ public class GreekDictionaryInterpreter {
 
 
 
-    }
-
-    private void addVerbToDictionary(String word, String translation) {
-        dictionary.put(word, translation);
-
-        // Imperfect Tense
-        dictionary.put("ε" + word, translation);
     }
 
     public int createDictionary() {
