@@ -539,6 +539,21 @@ public class GreekDictionaryInterpreter {
                             dictionary.put(stem + "σιν", eng + " (3c dat pl)");
                         }
                     }
+                    else if (grk.indexOf(";3d") >= 0) {
+                        if(flags.contains(Flag.USING_ACCENTS)) {
+                        } else {
+                            String stem = grk.replaceAll("ης;3d", "");
+
+                            dictionary.put(stem + "ησ", eng + " (3d nom s)");
+                            dictionary.put(stem + "η", eng + " (3d acc s)");
+                            dictionary.put(stem + "ους", eng + " (3d gen s)");
+                            dictionary.put(stem + "ει", eng + " (3d dat s)");
+                            dictionary.put(stem + "εις", eng + " (3d nom+acc pl)");
+                            dictionary.put(stem + "ων", eng + " (3d gen pl)");
+                            dictionary.put(stem + "σι", eng + " (3d dat pl)");
+                            dictionary.put(stem + "σιν", eng + " (3d dat pl)");
+                        }
+                    }
                     else if (grk.indexOf("ις;3e") >= 0) {
                         if(flags.contains(Flag.USING_ACCENTS)) {
                         } else {
