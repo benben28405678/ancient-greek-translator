@@ -168,6 +168,24 @@
 ηστε - you all were
 ησαν - they were
 #
+# I shall be --------------------------------------------------------------------------------
+εσομαι - I shall be
+εσει - you will be
+εσειη - you will be
+εσται - he will be/she will be/it will be
+εσομεθα - we will be
+εσεσθε - you all will be
+εσονται - they will be
+#
+# I will go --------------------------------------------------------------------------------
+ειμι - I shall go
+ει - you will go
+εισι - he will go/she will go/it will go
+ιμεν - we shall go
+ιτε - you all will go
+ιασι - they will go
+ιασιν - they will go
+#
 # Chapter 1
 # Section A, B --------------------------------------------------------------------------------
 ακροπολις;3e - acropolis
@@ -549,3 +567,8 @@
 ουτε - neither/nor
 πειθ.ω - persuade
 σοφ,ος - wise/clever
+#
+# Dupe Words with Accents -----------------------------------------------------------------------------
+ειμι - I shall go OR I am
+ει - you will go OR you are
+εισι - he will go/she will go/it will go OR they are

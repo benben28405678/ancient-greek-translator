@@ -142,15 +142,6 @@ public class GreekDictionaryInterpreter {
                         dictionary.put(imperfectStem + "ομεν", "we were " + eng + "-ing (1pl)");
                         dictionary.put(imperfectStem + "ετε", "you all were " + eng + "-ing (2pl)");
                         dictionary.put(imperfectStem + "ον", "they were " + eng + "-ing (3pl)");
-
-                        // Future Indicative Active
-                        dictionary.put(stem + "σ" + "ω", "I shall " + eng + " (1s)");
-                        dictionary.put(stem + "σ" + "εις", "You will " + eng + " (2s)");
-                        dictionary.put(stem + "σ" + "ει", "He/she/it will " + eng + " (3s)");
-                        dictionary.put(stem + "σ" + "ομεν", "We shall " + eng + " (1pl)");
-                        dictionary.put(stem + "σ" + "ετε", "You all will " + eng + " (2pl+imp pl)");
-                        dictionary.put(stem + "σ" + "ουοι", "They will " + eng + " (3pl)");
-                        dictionary.put(stem + "σ" + "ουοιν", "They will " + eng + " (3pl)");
                     }
 
                     // Present Active Participle
@@ -178,6 +169,28 @@ public class GreekDictionaryInterpreter {
                     dictionary.put(participleStem + "οντων", eng + "-ing (gen n pl)");
                     dictionary.put(participleStem + "ουσι", eng + "-ing (dat n pl)");
                     dictionary.put(participleStem + "ουσιν", eng + "-ing (dat n pl)");
+
+                    String futureStem = stem + "σ";
+
+                    String lastTwo = futureStem.substring(futureStem.length() - 2);
+                    String lastThree = futureStem.substring(futureStem.length() - 3);
+
+                    if(lastTwo.equals("βσ") || lastTwo.equals("πσ") || lastTwo.equals("φσ")) futureStem = "ψ";
+                    else if(lastThree.equals("πτσ")) futureStem = "ψ";
+                    else if(lastTwo.equals("γσ") || lastTwo.equals("κσ") || lastTwo.equals("χσ")) futureStem = "ζ";
+                    else if(lastThree.equals("οκσ") || lastThree.equals("ττσ")) futureStem = "ζ";
+                    else if(lastTwo.equals("δσ") || lastTwo.equals("ζσ") || lastTwo.equals("θσ") || lastTwo.equals("τσ")) futureStem = "σ";
+                    else if(lastTwo.equals("ασ") || lastTwo.equals("εσ")) futureStem = "ησ";
+                    else if(lastTwo.equals("οσ")) futureStem = "ωσ";
+
+                    // Future Indicative Active
+                    dictionary.put(futureStem + "ω", "I shall " + eng + " (1s)");
+                    dictionary.put(futureStem + "εις", "You will " + eng + " (2s)");
+                    dictionary.put(futureStem + "ει", "He/she/it will " + eng + " (3s)");
+                    dictionary.put(futureStem + "ομεν", "We shall " + eng + " (1pl)");
+                    dictionary.put(futureStem + "ετε", "You all will " + eng + " (2pl+imp pl)");
+                    dictionary.put(futureStem + "ουοι", "They will " + eng + " (3pl)");
+                    dictionary.put(futureStem + "ουοιν", "They will " + eng + " (3pl)");
 
                     continue;
                 }
